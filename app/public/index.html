@@ -4,306 +4,42 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../src/carrusel.css">
 
     <title>JJ BANK</title>
-
 </head>
 
 <body>
-    <!-- <div class="container sticky-top"> -->
+
     <header>
-        <!-- NAVBAR AQUI -->
-
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-            <img src="/app/src/assets/img/nuevologo.png" width="30" height="30" alt="">
-            <a class="navbar-brand" href="#">Bank</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="profile.html">Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="admin.html">Admin</a>
-                    </li>
-
-                </ul>
-            </div>
-        </nav>
-        <!-- </div> -->
+        <!--Nav Bar-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="navbar"></nav>
     </header>
 
-    <div class="container-fluid">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active col-12 text-center img-fluid">
-                    <img src="https://www.cardrates.com/wp-content/uploads/2019/09/Best-Credit-Cards-for-Shopping-Feat.jpg" alt="Third slide" class="img-2">
+    <!--Carousel-->
+    <section class="carousel" id="carousel"></section>
 
-                    <div class="header-text hidden-xs d-none d-lg-block">
-                        <div class="">
-                            <h2>
-                                <span>Bienvenidos a JJ-Bank</span>
-                            </h2>
-                            <br>
-                            <h3>
-                                <span>El Futuro, Ahora</span>
-                            </h3>
-                            <br>
-                            <div class="">
-                                <a class="btn btn-theme btn-sm btn-min-block" href="#"></a>
-                                <a class="btn btn-theme btn-sm btn-min-block btn" href="#"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item  col-12 img-fluid">
-                    <img src="https://images.financebuzz.com/1455x768/filters:quality(70)/images/2019/07/15/man-having-best-credit-cards-for-shopping-on-amazon.jpg" alt="Third slide" class="img-2">
-                    <div class="header-text hidden-xs d-none d-lg-block">
-                        <div class=" text-center">
-                            <h2>
-                                <span>Solución Digital</span>
-                            </h2>
-                            <br>
-                            <h3>
-                                <span>Ahorrá en tiempo y recursos. Ganá eficiencia</span>
-                            </h3>
-                            <br>
-                            <div class="">
-                                <a class="btn btn-theme btn-sm btn-min-block " href="#"></a>
-                                <a class="btn btn-theme btn-sm btn-min-block" href="#"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item col-12 img-fluid">
-                    <img src="https://www.badcredit.org/wp-content/uploads/2019/04/storecover.jpg" alt="Third slide" class="img-2">
-                    <div class="header-text hidden-xs d-none d-lg-block">
-                        <div class=" text-center">
-                            <h2>
-                                <span>Conéctate con el futuro</span>
-                            </h2>
-                            <br>
-                            <h3>
-                                <span>Intégrate con el banco mas innovador</span>
-                            </h3>
-                            <br>
-                            <div class="">
-                                <a class="btn btn-theme btn-sm btn-min-block" href="#"></a>
-                                <a class="btn btn-theme btn-sm btn-min-block" href="#"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </div>
-
-
+    <!--Main-->
     <main id="main" class="container">
-
-        <section id="services" class="services">
-            <!--cards1-->
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-4">
-                        <div class="card">
-                            <img src="https://www.bbva.com/wp-content/uploads/2018/08/Tarjetas-de-Credito-Paraguay-1024x683.jpg" class="card-img-top" width="200px" height="200px">
-                            <div class="card-body">
-                                <h5 class="card-title">Tarjetas de Credito</h5>
-                                <p class="card-text">Las tarjetas de crédito de JJBANK no solo son un medio de pago práctico y seguro también te ofrecen: </p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">La financiación que necesitás para esas compras que no pueden esperar</li>
-                                <li class="list-group-item">Podés controlar mejor tus gastos</li>
-                                <li class="list-group-item">Posibilidad de elegir plazos de pago</li>
-                                <li class="list-group-item">Disposición de dinero en forma de crédito en el momento que lo necesités estamos esperándote.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!--cards2-->
-                    <div class="col-4">
-                        <div class="card ">
-                            <img src="https://whostingok.com/wp-content/uploads/2019/10/prestamos4.png" class="card-img-top" width="200px" height="200px">
-                            <div class="card-body">
-                                <h5 class="card-title">Préstamos</h5>
-                                <p class="card-text">Para el viaje que soñás, remodelar o equipar tu casa, emprender un negocio o lo que te propongas. ¡Concretá tu proyecto con la financiación más conveniente! </p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Su solicitud puede ser online y se acredita inmediatamente.</li>
-                                <li class="list-group-item">Tenés la posibilidad de cancelarlo anticipadamente cuando quieras</li>
-                                <li class="list-group-item">Comenzá a disfrutar de tu préstamo ahora </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!--cards3-->
-                    <div class="col-4">
-                        <div class="card">
-                            <img src="https://casaluces.files.wordpress.com/2016/08/ahora_12_casaluces1.png?w=662" class="card-img-top" width="200px" height="200px">
-                            <div class="card-body">
-                                <h5 class="card-title">Ahora 12 y Ahora 18</h5>
-                                <p class="card-text">PROMOCIÓN VÁLIDA PARA CONSUMO FAMILIAR EN LA REPUBLICA ARGENTINA DESDE EL 01/02/2020 al 29/02/2020. ... LAS 3 y 6 CUOTAS SON EXCLUSIVAS PARA COMPRAS CON TARJETA DE CRÉDITO VISA, MASTERCARD, CABAL Y DINERS CLUB</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Promocion válida desde 01/02/2020 AL 28/05/2020.</li>
-                                <li class="list-group-item">El plan del gobierno nacional , incluye smatphones, notebooks, televisores, turismo, tablets, todo lo que necesitas</li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <section class="col-12 aboutus">
-            <div class="row">
-                <h3>Sobre nosotros</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta molestiae, non mollitia ratione ad consequatur repudiandae fuga voluptatem pariatur ipsam facilis quam officiis vel. Quos illum officia labore dignissimos repudiandae! Lorem,
-                    ipsum dolor sit amet consectetur adipisicing elit. Dicta molestiae, non mollitia ratione ad consequatur repudiandae fuga voluptatem pariatur ipsam facilis quam officiis vel. Quos illum officia labore dignissimos repudiandae! Lorem,
-                    ipsum dolor sit amet consectetur adipisicing elit. Dicta molestiae, non mollitia ratione ad consequatur repudiandae fuga voluptatem pariatur ipsam facilis quam officiis vel. Quos illum officia labore dignissimos repudiandae!
-                </p>
-            </div>
-        </section>
-
+        <!--Services-->
+        <section class="services" id="services"></section>
     </main>
 
+    <!--About us-->
+    <section class="aboutus" id="aboutus"></section>
 
-
-    <footer class="pt-4 pb-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4 ">
-                    <h5 class="mb-4 text-center">Contáctenos </h5>
-
-                    <ul class="f-address">
-                        <li>
-                            <div class="row">
-                                <div class="col-1"><i class="fas fa-map-marker"></i></div>
-                                <div class="col-10">
-                                    <h6 class="font-weight-bold mb-0">Dirección:</h6>
-                                    <p>Gral. Paz 576, T4000 San Miguel de Tucumán, Tucumán </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="row">
-                                <div class="col-1"><i class="far fa-envelope"></i></div>
-                                <div class="col-10">
-                                    <h6 class="font-weight-bold mb-0">Preguntas</h6>
-                                    <p><a href="#">nosotros@jjbank.com</a></p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="row">
-                                <div class="col-1"><i class="fas fa-phone-volume"></i></div>
-                                <div class="col-10">
-                                    <h6 class="font-weight-bold mb-0">Telefono</h6>
-                                    <p><a href="#">0381-555555 000</a></p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
-                    <h5 class="mb-4 text-center"> Información</h5>
-                    <ul class="f-address">
-                        <li>
-                            <div class="row">
-                                <div class="col-1"><i class="fas fa-angle-right"></i> </div>
-                                <div class="col-10">
-                                    <p class="mb-0"><a href="#">Promos y Beneficios </a></p>
-                                    <label>Más ahorros para vos  </label>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="row">
-                                <div class="col-1"><i class="fas fa-angle-right"></i> </div>
-                                <div class="col-10">
-                                    <p class="mb-0"><a href="#"> Créditos y préstamos</a></p>
-                                    <label> Préstamos a tu medida  </label>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="row">
-                                <div class="col-1"> <i class="fas fa-angle-right"></i> </div>
-                                <div class="col-10">
-                                    <p class="mb-0"><a href="#"> Tarjetas</a></p>
-                                    <label>Las más elegidas</label>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="row">
-                                <div class="col-1"> <i class="fas fa-angle-right"></i> </div>
-                                <div class="col-10">
-                                    <p class="mb-0"><a href="#">Sobre Nosotros </a></p>
-                                    <label>Un equipo en movimiento </label>
-                                </div>
-                            </div>
-                        </li>
-
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
-                    <h5 class="mb-4 font-weight-bold"></h5>
-
-
-                    <img src="jjb.png" class="animated bounce infinite " alt="logo">
-
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
-
-
-                    <ul class="social-pet mt-5">
-                        <li><a href="#" title="facebook"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#" title="twitter"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#" title="instagram"><i class="fab fa-instagram"></i></a></li>
-                    </ul>
-
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!--Footer-->
+    <footer class="pt-4 pb-5" id="footer"></footer>
 
     <!-- Copyright -->
-    <section class="copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 ">
-                    <div class="text-center text-white">
-                        &copy; 2020 Your Company. J.J Bank. Todos los derechos Reservados.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="copyright" id="copyright"></section>
 
-
-
-
+    <!--Scripts-->
+    <script src="app/src/navbar.js"></script>
+    <script src="app/src/carousel.js"></script>
+    <script src="app/src/services.js"></script>
+    <script src="app/src/aboutus.js"></script>
+    <script src="app/src/footer.js"></script>
+    <script src="app/src/copyright.js"></script>
 </body>
 
 </html>
