@@ -14,8 +14,8 @@ module.exports = {
         footer: './app/src/footer.js',
         login: './app/src/login.js',
         navbar: './app/src/navbar.js',
-        services: './app/src/services.js'
-
+        services: './app/src/services.js',
+        tabla: './app/src/tabla.js'
     },
     output: {
         filename: "[name].js",
@@ -77,7 +77,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: "./app/public/admin.html",
             inject: true,
-            chunks: ['dashBoard'],
+            chunks: ['dashBoard', 'tabla'],
             filename: 'admin.html'
         }),
         new HtmlWebpackPlugin({
