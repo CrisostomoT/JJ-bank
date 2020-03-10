@@ -1,22 +1,36 @@
 import CardCliente from './CardClientes'
-// import usuariosRegistrados from './logicaRegister'
+import usuariosRegistrados from '../'
 
-// const NuevosClientes = usuariosRegistrados[i]
-// const ulClientes = document.getElementById("clientes");
+const NuevasSolicitudes = usuariosRegistrados || []
+const ulSolicitudes = document.getElementById("clientes");
 
 
-// export const listarClientes = () => {
+export const listarSolicitudes = (index) => {
 
-//   ulClientes.innerHTML = ""; 
+  ulSolicitudes.innerHTML = ""; 
 
-//   NuevosClientes.forEach(function (cliente, index) {
+  NuevasSolicitudes.forEach(function (cliente, index) {
 
-//     ulClientes.innerHTML +=  CardCliente(cliente.nombre, cliente.Apellido, cliente.Dni, cliente.Email, cliente.Direccion, cliente.Ciudad, cliente.Provincia)
-//   })
+    ulSolicitudes.innerHTML +=  CardCliente(cliente.nombre, cliente.Apellido, cliente.Dni, cliente.Email, cliente.Direccion, cliente.Ciudad, cliente.Provincia)
+  })
 
-// };
-// listarClientes();
+};
+listarSolicitudes();
 
-// const listaClientes = 
+  const NuevosClientes = ulSolicitudes
+const listadoClientes = document.getElementById('listaClientes')
+
+const listarClientes = () => {
+  listadoClientes.innerHTML = '';
+  NuevosClientes.forEach(function(item , index){
+      console.log(item)
+      listadoClientes.innerHTML += `<li>${item}<button onclick="elminarCliente(${index})">Eliminar Cliente</button></li>`;
+  })
+}
+
+const eliminarCliente = () => {
+  listadoClientes.splice(i,1)
+}
+
 
 

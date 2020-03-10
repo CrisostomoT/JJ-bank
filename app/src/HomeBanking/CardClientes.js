@@ -9,10 +9,9 @@ const CardCliente = (nombre, Apellido, Dni, Email,  Direccion, Ciudad, Provincia
                 <td>${Provincia}</td>
                 <td><button type="button" onClick="listarClientes()" class="btn btn-outline-warning">Aprobado</button>
                 <button type="button" class="btn btn-outline-danger">Denegado</button></td>
-                </tr>
-       
- `;
+                </tr>`;
 
+                
 
 
 
