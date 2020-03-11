@@ -1,3 +1,5 @@
+import {hacerRegister} from './logicaRegister'
+
 function componentRegister() {
     const element = document.createElement('div');
     element.innerHTML = `
@@ -27,7 +29,7 @@ function componentRegister() {
           </form>
 
           <div class="form-group col-md-4">
-                <label for="inputState">Seleccionar Genero</label>
+                <label for="inputState"> Género</label>
                 <select id="genero" class="form-control">
                   <option selected> </option>
                   <option>Masculino</option>
@@ -73,9 +75,15 @@ function componentRegister() {
                 <select id="provincia" class="form-control">
                   <option selected> </option>
                   <option>Buenos Aires</option>
+                  <option>Salta</option>
                   <option>Cordoba</option>
+                  <option>San Juan</option>
+                  <option>Buenos Aires</option>
+                  <option>San Luis</option>
+                  <option>Neuquen</option>
                   <option>Tucuman</option>
                   <option>Santa Fe</option>
+                  <option>Mendoza</option>
                 </select>
               </div>
               <div class="form-group col-md-2">
@@ -83,7 +91,7 @@ function componentRegister() {
                 <input type="text" class="form-control" id="inputZip" required>
               </div>
             </div>
-            <button type="button" onclick="hacerRegister()" class="btn btn-primary">Enviar</button>
+            <button type="button" id="hacerRegister" class="btn btn-primary">Enviar</button>
           </form>
         </div>
       </div>
@@ -91,5 +99,4 @@ function componentRegister() {
     return element
   }
   document.body.appendChild(componentRegister());
-
-
+  document.getElementById('hacerRegister').addEventListener('click',hacerRegister);
