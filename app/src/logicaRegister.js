@@ -34,7 +34,6 @@ const usuariosRegistrados = JSON.parse(localStorage.getItem("datosIngresados")) 
  localStorage.setItem('datosIngresados', JSON.stringify(usuariosRegistrados))
   validarRegister(email);
 }
-
 function validarRegister(email) {
   for (let i = 0; i < usuariosRegistrados.length; i++) {
    let usuarioreg = usuariosRegistrados[i];
@@ -50,10 +49,10 @@ function validarRegister(email) {
     break
     return
    }
-
     console.log(email);
     console.log(usuarioreg.Email);
   }
-
   
-} 
+}
+
+

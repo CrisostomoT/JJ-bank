@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+  <link rel="stylesheet" href="../src/styleAdmin.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
 
   <title>JJ BANK</title>
@@ -15,7 +16,8 @@
 </head>
 
 <body>
-  <!-- NAVBAR AQUI -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="navbar"></nav>
+  <!-- NAVBAR
   <nav class="navbar navbar-expand-lg navbar-success" style="background: linear-gradient(to right, #581845 , #900C3F )">
     <a class="navbar-brand test" href="#">JJBank</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -37,11 +39,10 @@
           <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             <span class="mr-2 d-none d-lg-inline text-gray-600 small">Administrador</span>
-            <img class="img img-profile rounded-circle"
-              src="https://previews.123rf.com/images/pandavector/pandavector1704/pandavector170400314/75968328-avatar-de-un-hombre-en-una-camisa-avatar-y-cara-solo-icono-en-estilo-de-dibujos-animados-vector-s%C3%ADmbol.jpg">
+            <img class="img img-profile rounded-circle" src="app/src/img/1.jpg">
           </a>
-          <!-- Dropdown - User Information -->
-          <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+           Dropdown - User Information -->
+  <!-- <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
             <a class="dropdown-item" href="#">
               <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
               Perfil
@@ -58,14 +59,14 @@
             </a>
           </div>
         </li>
+
+
       </ul>
-    </div>  
-  </nav>
+    </div>
+  </nav> -->
 
 
   <div class="container-fluid">
-
-    <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
       <h1 class="h3 mb-0 text-danger-800"></h1>
     </div>
@@ -147,9 +148,9 @@
 
     <div class="row">
 
-      <div class="col-lg-6">
+      <div class="col-lg-12">
 
-        <!-- Default Card Example -->
+
         <div class="card shadow mb-4">
           <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Solicitud de Prestamo</h6>
@@ -173,180 +174,127 @@
                   <input type="checkbox" id="cbox2" value="second_checkbox"> <label for="cbox2">No</label></td>
                 <td><button type="button" class="btn btn-outline-warning">Enviar</button></td>
               </tr>
-
-
             </table>
-
           </div>
         </div>
+
         <div class="card shadow mb-4">
           <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Solicitud de Home Banking</h6>
           </div>
           <div class="card-body">
             <table class="table">
-
               <tr>
                 <th>Nombre</th>
-                <th>Cliente</th>
+                <th>Apellido</th>
+                <th>DNI</th>
+                <th>Email</th>
+                <th>Direccion</th>
+                <th>Ciudad</th>
+                <th>Provincia</th>
               </tr>
-              <tr>
-                <td>Diego</td>
-                <td><label><input type="checkbox" id="cbox1" value="first_checkbox"> Si</label>
-                  <input type="checkbox" id="cbox2" value="second_checkbox"> <label for="cbox2">No</label></td>
-                <td><button type="button" class="btn btn-outline-warning">Enviar</button></td>
-              </tr>
-
+              <tbody id="clientes"></tbody>
 
             </table>
           </div>
         </div>
-
       </div>
+    </div>
 
-      <div class="col-lg-6">
 
-        <!-- Dropdown Card Example -->
-        <div class="card shadow mb-4">
-          <!-- Card Header - Dropdown -->
-          <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-            <h6 class="m-0 font-weight-bold text-primary">Solicitud de tarjeta de credito</h6>
-            <div class="dropdown no-arrow">
-              <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-              </a>
-              <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                aria-labelledby="dropdownMenuLink">
-                <div class="dropdown-header">Tarjeta:</div>
-                <a class="dropdown-item" href="#">Visa</a>
-                <a class="dropdown-item" href="#">Mastercard</a>
-                <a class="dropdown-item" href="#">American Expres</a>
-              </div>
+    <div class="col-lg-12">
+
+
+      <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+          <h6 class="m-0 font-weight-bold text-primary">Solicitud de tarjeta de credito</h6>
+          <div class="dropdown no-arrow">
+            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+              <div class="dropdown-header">Tarjeta:</div>
+              <a class="dropdown-item" href="#">Visa</a>
+              <a class="dropdown-item" href="#">Mastercard</a>
+              <a class="dropdown-item" href="#">American Expres</a>
             </div>
           </div>
-          <!-- Card Body -->
+        </div>
+        <!-- Card Body -->
+        <div class="card-body">
+          <table class="table">
+
+            <tr>
+              <th>Nombre</th>
+              <th>Cliente</th>
+              <th>Tarjeta</th>
+
+              <th>Aprobacion</th>
+            </tr>
+            <tr>
+              <td>Diego</td>
+              <td></td>
+              <td><label><input type="checkbox" id="cbox1" value="first_checkbox"> Visa</label><br>
+                <label><input type="checkbox" id="cbox1" value="first_checkbox">Master</label><br>
+                <label><input type="checkbox" id="cbox1" value="first_checkbox">American</label></td>
+              <td><label><input type="checkbox" id="cbox1" value="first_checkbox"> Si</label>
+                <input type="checkbox" id="cbox2" value="second_checkbox"> <label for="cbox2">No</label></td>
+              <td><button type="button" class="btn btn-outline-warning">Enviar</button></td>
+            </tr>
+
+
+          </table>
+        </div>
+      </div>
+
+      <div class="card shadow mb-4">
+
+        <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button"
+          aria-expanded="true" aria-controls="collapseCardExample">
+          <h6 class="m-0 font-weight-bold text-primary">Lista de Clientes</h6>
+        </a>
+
+        <div class="collapse show" id="collapseCardExample">
           <div class="card-body">
-            <table class="table">
+            <table id="example" class="hover" style="width:100%">
 
               <tr>
                 <th>Nombre</th>
-                <th>Cliente</th>
-                <th>Tarjeta</th>
-
-                <th>Aprobacion</th>
+                <th>Apellido</th>
+                <th>DNI</th>
+                <th>Email</th>
+                <th>Direccion</th>
+                <th>Ciudad</th>
+                <th>Provincia</th>
+                
               </tr>
-              <tr>
-                <td>Diego</td>
-                <td></td>
-                <td><label><input type="checkbox" id="cbox1" value="first_checkbox"> Visa</label><br>
-                  <label><input type="checkbox" id="cbox1" value="first_checkbox">Master</label><br>
-                  <label><input type="checkbox" id="cbox1" value="first_checkbox">American</label></td>
-                <td><label><input type="checkbox" id="cbox1" value="first_checkbox"> Si</label>
-                  <input type="checkbox" id="cbox2" value="second_checkbox"> <label for="cbox2">No</label></td>
-                <td><button type="button" class="btn btn-outline-warning">Enviar</button></td>
-              </tr>
-
+              <tbody id="listaClientes"></tbody>
 
             </table>
           </div>
         </div>
-        <!-- Collapsable Card Example -->
-        <div class="card shadow mb-4">
-          <!-- Card Header - Accordion -->
-          <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button"
-            aria-expanded="true" aria-controls="collapseCardExample">
-            <h6 class="m-0 font-weight-bold text-primary">Lista de Clientes</h6>
-          </a>
-          <!-- Card Content - Collapse -->
-          <div class="collapse show" id="collapseCardExample">
-            <div class="card-body">
-              <table id="example" class="hover" style="width:100%">
-                <thead>
-                  <tr>
-                    <th>Nombre</th>
-                    <th>Direccion</th>
-                    <th>DNI</th>
-                    <th>Tel.</th>
-                    <th>Ciudad</th>
-
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Tiger Nixon</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>61</td>
-                    <td>2011/04/25</td>
-
-                  </tr>
-                  <tr>
-                    <td>Garrett Winters</td>
-                    <td>Accountant</td>
-                    <td>Tokyo</td>
-                    <td>63</td>
-                    <td>2011/07/25</td>
-
-                  </tr>
-                  <tr>
-                    <td>Ashton Cox</td>
-                    <td>Junior Technical Author</td>
-                    <td>San Francisco</td>
-                    <td>66</td>
-                    <td>2009/01/12</td>
-
-                  </tr>
-                  <tr>
-                    <td>Cedric Kelly</td>
-                    <td>Senior Javascript Developer</td>
-                    <td>Edinburgh</td>
-                    <td>22</td>
-                    <td>2012/03/29</td>
-
-                  </tr>
-
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-
-        <!-- Collapsable Card Example -->
-        <div class="card shadow mb-4">
-          <!-- Card Header - Accordion -->
-          <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button"
-            aria-expanded="true" aria-controls="collapseCardExample">
-            <h6 class="m-0 font-weight-bold text-primary">Tareas de mantenimiento</h6>
-          </a>
-          <!-- Card Content - Collapse -->
-          <div class="collapse show" id="collapseCardExample">
-            <div class="card-body">
-              <ul>
-                <li>Revisar periodicamente los servidores</li>
-                <li>Revisar solicitudes de prestamos</li>
-                <li>Autorizar ingresos Home Banking</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="card shadow mb-4">
-          <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Dinero Prestado</h6>
-          </div>
-          <div class="card-body">
-            <div class="chart-area">
-              <canvas id="myAreaChart"></canvas>
-            </div>
-            <hr>
-
-          </div>
-        </div>
-
-
       </div>
+
+
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">Dinero Prestado</h6>
+        </div>
+        <div class="card-body">
+          <div class="chart-area">
+            <canvas id="myAreaChart"></canvas>
+          </div>
+          <hr>
+
+        </div>
+      </div>
+
 
     </div>
+
+  </div>
 
   </div>
   <!-- /.container-fluid -->
