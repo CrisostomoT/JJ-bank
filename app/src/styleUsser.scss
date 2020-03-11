@@ -10,15 +10,20 @@ body{
     color: whitesmoke !important;
 }
 .contenedor{
-    min-height: 100%;
+    // min-height: 100%;
+    
     
 }
 .img-profile {
     width: 50px;
     height: 50px;
 }
-// #encabezado{
-//     position: fixed;
-//     top: 0;
-//     width: 100%
-// }
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100vh ;
+    width: 100%;
+    max-width: 960px;
+    margin:0 auto;
+    overflow: hidden;
+}
