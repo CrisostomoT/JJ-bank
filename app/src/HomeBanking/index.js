@@ -4,6 +4,9 @@ import usuariosRegistrados from '../'
 const NuevasSolicitudes = usuariosRegistrados || []
 const ulSolicitudes = document.getElementById("clientes");
 
+export const aprobarCliente = (index) => {
+  
+}
 
 export const listarSolicitudes = (index) => {
 
@@ -11,7 +14,7 @@ export const listarSolicitudes = (index) => {
 
   NuevasSolicitudes.forEach(function (cliente, index) {
 
-    ulSolicitudes.innerHTML +=  CardCliente(cliente.nombre, cliente.Apellido, cliente.Dni, cliente.Email, cliente.Direccion, cliente.Ciudad, cliente.Provincia)
+    ulSolicitudes.innerHTML +=  CardCliente(cliente, index)
   })
 
 };
