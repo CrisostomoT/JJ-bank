@@ -28,20 +28,6 @@ let NuevasSolicitudes = [{
     provincia: "Tuc"
   }
 ]
-let NuevosClientes = [];
-const ulSolicitudes = document.getElementById("clientes");
-
-// function aprobarCliente(index) {
-//   console.log('sdf')
-//   const cliente = NuevasSolicitudes[index];
-//   NuevosClientes.push(cliente);
-//   NuevasSolicitudes.splice(index, 1);
-//   listarSolicitudes();
-//   listarClientes();
-
-// }
-
-
 
 
 const CardCliente = (cliente, index) => `
@@ -58,17 +44,13 @@ const CardCliente = (cliente, index) => `
                 </tr>`;
 
 
+let ulSolicitudes = document.getElementById("solicitudes");
 
-
-const eliminarCliente = (index) => {
-  NuevosClientes.splice(index, 1);
-  listarClientes();
-}
-
-
-const listadoClientes = document.getElementById('listaClientes')
+let listadoClientes = document.getElementById('listaClientes')
 
 const listarClientes = () => {
+
+  let NuevosClientes = JSON.parse(localStorage.getItem("nuevosClientes")) || [];
   listadoClientes.innerHTML = '';
   NuevosClientes.forEach(function (cliente, index) {
     listadoClientes.innerHTML += `
@@ -80,11 +62,13 @@ const listarClientes = () => {
       <td>${cliente.direccion}</td>
       <td>${cliente.ciudad}</td>
       <td>${cliente.provincia}</td>
-      <td><button type="button" onClick="eliminarCliente(${index})" class="btn btn-outline-danger">Eliminar</button>
+      <td><button type="button" id="eliminarCliente${index}" class="btn btn-outline-danger">Eliminar</button>
       </td>
       </tr>`;
   })
+
 }
+
 
 export const listarSolicitudes = () => {
 
@@ -97,36 +81,69 @@ export const listarSolicitudes = () => {
     setTimeout(() => {
       document.querySelector("#btnAprobar" + index).addEventListener('click', () => {
         let index = event.target.dataset.index;
-  
+
         console.log('sdf')
         const cliente = NuevasSolicitudes[index];
+        let NuevosClientes = JSON.parse(localStorage.getItem("nuevosClientes")) || [];
         NuevosClientes.push(cliente);
         NuevasSolicitudes.splice(index, 1);
+        localStorage.setItem("nuevosClientes", JSON.stringify(NuevosClientes));
         listarSolicitudes();
         listarClientes();
-  
+
       })
     }, 10)
-    
+
     setTimeout(() => {
       document.querySelector("#desaprobarCliente" + index).addEventListener('click', () => {
-        console.log("entra", index);
 
-        function desaprobarCliente(index){
-          console.log("hola");
+
+        function desaprobarCliente(index) {
+
           NuevasSolicitudes.splice(index, 1);
-          listarSolicitudes();    
+          listarSolicitudes();
           listarClientes();
         }
         desaprobarCliente();
       })
     }, 1)
+
+
   })
 
 };
 
 
 
+const eliminaCliente = () => {
+
+  let NuevosClientes = JSON.parse(localStorage.getItem("nuevosClientes")) || [];
+
+  listadoClientes.innerHTML = "";
+
+  NuevosClientes.forEach((cliente, index) => {
+    listadoClientes += CardCliente(cliente, index);
+    setTimeout(() => {
+      document.querySelector("#eliminarClientes" + index).addEventListener('click', () => {
+
+
+        function eliminarCliente(index) {
+
+          console.log(probando)
+          NuevosClientes.splice(index, 1);
+          localStorage.setItem("nuevosClientes", JSON.stringify(NuevosClientes));
+          listarSolicitudes();
+          listarClientes();
+        }
+        eliminarCliente();
+      })
+    }, 1);
+
+
+  })
+}
 
 
 listarSolicitudes();
+listarClientes();
+eliminaCliente();
