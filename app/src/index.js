@@ -7,3 +7,5 @@ import './index.scss';
 import './styleUsser.scss';
 import './sesion.js';
 import './interface.js'
+import './modalRegister.js'
+import './logicaRegister.js'

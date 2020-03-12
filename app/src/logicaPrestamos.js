@@ -1,5 +1,5 @@
 
-
+  
  export default function cuotaMensual (){
 
     let dropMonto = document.getElementById("monto");
