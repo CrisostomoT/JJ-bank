@@ -55,9 +55,9 @@ nav .nav-container {
 //**
 
 //Carousel
-.carousel {
-  margin: 85px auto;
-}
+// .carousel {
+//   margin: 85px auto;
+// }
 .carousel-inner {
   // width: 1300px;
   height: 550px;
@@ -301,8 +301,9 @@ section .copyright {
 }
 
 img {
-  width: 180px;
-  height: 200px;
+  //corregir estilo, no usar selectores de etiquetas, usar clases
+  // width: 180px;
+  // height: 200px;
 }
 
 .copyright {
