@@ -1,34 +1,6 @@
 import usuariosRegistrados from '../'
 
-let NuevasSolicitudes = [{
-    nombre: "Maxi",
-    apellido: "Estrada",
-    dni: "2325522452",
-    email: "max@gmail.com",
-    direccion: "mi casa",
-    ciudad: "S M Tuc",
-    provincia: "Tuc"
-  },
-  {
-    nombre: "Diego",
-    apellido: "Olmi",
-    dni: "23255dssdf22452",
-    email: "diego@gmail.com",
-    direccion: "mi casa",
-    ciudad: "S M Tuc",
-    provincia: "Tuc"
-  },
-  {
-    nombre: "Elsa",
-    apellido: "Estrada",
-    dni: "2325522452",
-    email: "elsa@gmail.com",
-    direccion: "mi casa",
-    ciudad: "S M Tuc",
-    provincia: "Tuc"
-  }
-]
-
+let NuevasSolicitudes = localStorage.getItem("datosIngresados");
 
 const CardCliente = (cliente, index) => `
                 <tr>
