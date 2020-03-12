@@ -18,6 +18,44 @@ const CardCliente = (cliente, index) => `
 
 let ulSolicitudes = document.getElementById("solicitudes");
 
+export const listarSolicitudes = () => {
+
+  ulSolicitudes.innerHTML = "";
+
+  NuevasSolicitudes.forEach(function (cliente, index) {
+
+    ulSolicitudes.innerHTML += CardCliente(cliente, index);
+
+    setTimeout(() => {
+      document.querySelector("#btnAprobar" + index).addEventListener('click', () => {
+        let index = event.target.dataset.index;
+
+
+        const cliente = NuevasSolicitudes[index];
+        let NuevosClientes = JSON.parse(localStorage.getItem("nuevosClientes")) || [];
+        NuevosClientes.push(cliente);
+        NuevasSolicitudes.splice(index, 1);
+        localStorage.setItem("nuevosClientes", JSON.stringify("NuevosClientes"));
+        listarSolicitudes();
+        listarClientes();
+
+      })
+    }, 10)
+
+    setTimeout(() => {
+      document.querySelector("#desaprobarCliente" + index).addEventListener('click', () => {
+        function desaprobarCliente(index) {
+          NuevasSolicitudes.splice(index, 1);
+          listarSolicitudes();
+          listarClientes();
+        }
+        desaprobarCliente();
+      })
+    }, 1)
+  })
+};
+
+
 let listadoClientes = document.getElementById('listaClientes')
 
 const listarClientes = () => {
@@ -42,48 +80,6 @@ const listarClientes = () => {
 }
 
 
-export const listarSolicitudes = () => {
-
-  ulSolicitudes.innerHTML = "";
-
-  NuevasSolicitudes.forEach(function (cliente, index) {
-
-    ulSolicitudes.innerHTML += CardCliente(cliente, index);
-
-    setTimeout(() => {
-      document.querySelector("#btnAprobar" + index).addEventListener('click', () => {
-        let index = event.target.dataset.index;
-
-        console.log('sdf')
-        const cliente = NuevasSolicitudes[index];
-        let NuevosClientes = JSON.parse(localStorage.getItem("nuevosClientes")) || [];
-        NuevosClientes.push(cliente);
-        NuevasSolicitudes.splice(index, 1);
-        localStorage.setItem("nuevosClientes", JSON.stringify(NuevosClientes));
-        listarSolicitudes();
-        listarClientes();
-
-      })
-    }, 10)
-
-    setTimeout(() => {
-      document.querySelector("#desaprobarCliente" + index).addEventListener('click', () => {
-
-
-        function desaprobarCliente(index) {
-
-          NuevasSolicitudes.splice(index, 1);
-          listarSolicitudes();
-          listarClientes();
-        }
-        desaprobarCliente();
-      })
-    }, 1)
-
-
-  })
-
-};
 
 
 
