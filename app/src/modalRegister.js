@@ -27,7 +27,6 @@ function componentRegister() {
               </div>
             </div>
           </form>
-
           <div class="form-group col-md-4">
                 <label for="inputState"> Género</label>
                 <select id="genero" class="form-control">
@@ -37,7 +36,6 @@ function componentRegister() {
                   <option>Otros</option>
                 </select>
               </div>
-
          
           <div class="form-row">
             <div class="form-group col-md-6">
