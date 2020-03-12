@@ -27,3 +27,24 @@ body{
     margin:0 auto;
     overflow: hidden;
 }
+.boton{
+    background: linear-gradient(to right, #581845, #900C3F);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    color: #ffffff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 22px;
+    padding-right: 25px;
+    border-color: #F69DA1;
+    border-width: 3px;
+    border-style: solid;
+}
+
+
+
+#modal-prestamos{
+    background: linear-gradient(to right, #581845 , #900C3F );
+    color: #fff;
+}
