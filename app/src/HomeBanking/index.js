@@ -146,4 +146,4 @@ const eliminaCliente = () => {
 
 listarSolicitudes();
 listarClientes();
-eliminaCliente();
+// eliminaCliente();
