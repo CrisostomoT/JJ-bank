@@ -5,3 +5,5 @@ import Swal from 'sweetalert2';
 
 import './index.scss';
 import './styleUsser.scss';
+
+import './logicaPrestamos';

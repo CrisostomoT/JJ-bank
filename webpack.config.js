@@ -15,7 +15,8 @@ module.exports = {
         login: './app/src/login.js',
         navbar: './app/src/navbar.js',
         services: './app/src/services.js',
-        tabla: './app/src/tabla.js'
+        tabla: './app/src/tabla.js',
+        logicaPrestamos:'./app/src/logicaPrestamos.js'
     },
     output: {
         filename: "[name].js",
