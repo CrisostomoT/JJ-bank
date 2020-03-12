@@ -25,6 +25,10 @@ function componentRegister() {
               </div>
             </div>
           </form>
+<<<<<<< HEAD
+
+=======
+>>>>>>> diego-admin
           <div class="form-group col-md-4">
                 <label for="inputState">Seleccionar Genero</label>
                 <select id="genero" class="form-control">
@@ -34,6 +38,10 @@ function componentRegister() {
                   <option>Otros</option>
                 </select>
               </div>
+<<<<<<< HEAD
+
+=======
+>>>>>>> diego-admin
          
           <div class="form-row">
             <div class="form-group col-md-6">
@@ -90,4 +98,3 @@ function componentRegister() {
   }
   document.body.appendChild(componentRegister());
 
-export default modalRegister

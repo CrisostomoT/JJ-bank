@@ -1,7 +1,7 @@
 @import "~bootstrap/scss/bootstrap";
-@import '../../node_modules/startbootstrap-sb-admin-2/vendor/fontawesome-free/css/all.min.css';
-@import 'https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i';
-@import '../../node_modules/startbootstrap-sb-admin-2/css/sb-admin-2.min.css';
+@import "../../node_modules/startbootstrap-sb-admin-2/vendor/fontawesome-free/css/all.min.css";
+@import "https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i";
+@import "../../node_modules/startbootstrap-sb-admin-2/css/sb-admin-2.min.css";
 
 * {
   margin: 0;
@@ -9,16 +9,20 @@
 }
 
 // Navbar
+.navbar {
+  background: linear-gradient(to right, #581845 , #900C3F )
+}
 nav,
-nav .logo,
 .services,
 .nav-btn,
 nav .btn-login {
   display: flex;
 }
 
-nav .logo {
+nav .img-logo {
   margin-left: 30px;
+  width: 70px;
+  height: 70px;
 }
 
 nav .btn-login {
@@ -28,6 +32,11 @@ nav .btn-login {
 .nav-btn,
 nav .btn-login {
   align-items: center;
+}
+
+.navbar-light .navbar-nav .nav-link{
+  font-weight: bold;
+  color: #f8f9fa;
 }
 
 .nav-btn button,
@@ -40,24 +49,97 @@ nav .nav-container {
   width: 100%;
   display: flex;
   justify-content: space-between;
+
 }
 
-nav h1 {
-  font-size: 50px;
-}
 //**
 
 //Carousel
-.carousel{
-  margin: 0 auto;
+.carousel {
+  margin: 85px auto;
 }
 .carousel-inner {
-  width: auto;
-  height: 400px;
+  // width: 1300px;
+  height: 550px;
+}
+.img-2 {
+  width: 100vw;
+  height: auto;
 }
 .img {
   width: auto;
   height: 400px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.header-text {
+  position: absolute;
+  top: 48%;
+  left: 2%;
+  //  right: 50%;
+  width: 96.66666666666666%;
+  color: #fff;
+}
+
+.header-text h2 {
+  font-size: 40px;
+}
+
+.header-text h2 span {
+  background-color: #2980b9;
+  opacity: 0.5;
+  padding: 10px;
+}
+
+.header-text h3 span {
+  background-color: #000;
+  opacity: 0.5;
+  padding: 15px;
 }
 //**
 
@@ -67,19 +149,165 @@ nav h1 {
   justify-content: space-around;
 }
 
-/*#1 {
-  background-image: url(./assests/1.jpg);
-  background-size: cover;
-}*/
+.services .card{
+  border: none;
+}
+
 //**
 
 //Sobre nosotros
-.aboutus {
-  margin-top: 70px;
+#figura {
+  max-width: 100%;
+  width: 800px;
+  margin-top: 20px;
+  padding-left: 30px;
+  margin-bottom: 20px;
 }
+
+section .aboutus .container{
+  color: #f27121;
+  background: #8a2387;
+  margin-bottom: 50px;
+}
+
+.aboutus .container h3 {
+  color: #e94057;
+}
+
+.aboutus .container p {
+  font-size: 18px;
+}
+
 //**
 
 //Footer
 
+footer {
+  color: #f8f9fa;
+  background-attachment: fixed;
+  background-color: #900C3F;
+  background-size: cover;
+  background-position: bottom;
+}
+footer p {
+  color: #f8f9fa;
+}
 
-//**
+footer a {
+  color: #f8f9fa ;
+}
+.social-pet li {
+  display: inline-table;
+  margin-right: 10px;
+}
+.social-pet li a {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  text-align: center;
+  display: block;
+  line-height: 35px;
+  background-color: #0f110c;
+  color: #fff;
+}
+.social-pet li:nth-child(2) a {
+  background-color: #0f110c;
+}
+
+.social-pet li:nth-child(4) a {
+  background-color: #0f110c;
+}
+.social-pet li a:hover {
+  background-color: #581845;
+}
+
+#nosotros:hover {
+  background-color: #581845;
+}
+
+#nosotros {
+  background-color: #2e2e29;
+}
+
+.recent-post li label {
+  float: left;
+  border: 2px solid rgb(15, 14, 14);
+  padding: 1px 7px;
+  text-align: center;
+}
+
+.recent-post li label span {
+  color: #581845;
+}
+
+footer .input-group-addon {
+  background-color: #581845;
+  padding: 8px;
+}
+.f-address li {
+  display: inline-block;
+}
+.f-address li i {
+  color: #f8f9fa;
+  font-size: 18px;
+}
+.f-address li a {
+  font-weight: bold;
+  color: #f8f9fa;
+}
+
+/* @keyframes example {
+  0% {
+    background-color: #581845;
+  }
+  25% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: #581845;
+  }
+  100% {
+    background-color: #fff;
+  }
+}
+
+@keyframes final {
+  0% {
+    background-color: #fff;
+  }
+  25% {
+    background-color: #581845;
+  }
+  50% {
+    background-color: #fff;
+  }
+  100% {
+    background-color: #581845;
+  }
+} */
+
+footer {
+  animation-name: example;
+  animation-duration: 20s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+section .copyright {
+  animation-name: final;
+  animation-duration: 20s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+img {
+  //corregir estilo, no usar selectores de etiquetas, usar clases
+  // width: 180px;
+  // height: 200px;
+}
+
+.copyright {
+  background-color: #444443;
+  padding: 12px 0;
+  font-size: 14px;
+}

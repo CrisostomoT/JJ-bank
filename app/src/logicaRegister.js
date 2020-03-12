@@ -1,6 +1,10 @@
+
+
 const usuariosRegistrados = JSON.parse(localStorage.getItem("datosIngresados")) || [
   
 ];
+
+
   function hacerRegister() {
   // console.log('HOLA')
   const nombre = document.getElementById('nombre').value;

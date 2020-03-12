@@ -7,7 +7,16 @@ module.exports = {
     entry: {
         main: "./app/src/index.js",
         dashBoard: "./app/src/admin.js",
-        userProfile: "./app/src/profile.js"
+        userProfile: "./app/src/profile.js",
+        aboutUs: './app/src/aboutus.js',
+        carousel: './app/src/carousel.js',
+        copyright: './app/src/copyright.js',
+        footer: './app/src/footer.js',
+        login: './app/src/login.js',
+        navbar: './app/src/navbar.js',
+        services: './app/src/services.js',
+        tabla: './app/src/tabla.js',
+        logicaPrestamos:'./app/src/logicaPrestamos.js'
     },
     output: {
         filename: "[name].js",
@@ -28,7 +37,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.(scss)$/,
+                test: /\.(s?css)$/,
                 use: [{
                     loader: 'style-loader', // inject CSS to page
                 }, {
@@ -47,28 +56,35 @@ module.exports = {
                 }]
             },
             {
+
                 test: /\.(jpg|jpeg|png|woff|woff2|eot|ttf|svg|gif)$/,
-                use: ["file-loader"]
+                use: [{
+                    loader: "file-loader",
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'assets/images'
+                    }
+                }]
             }
         ]
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: "./app/public/index.html",
-            inject:true,
-            chunks:['main'],
+            inject: true,
+            chunks: ['main', 'aboutUs', 'carousel', 'copyright', 'footer', 'login', 'navbar', 'services'],
             filename: 'index.html'
         }),
         new HtmlWebpackPlugin({
             template: "./app/public/admin.html",
-            inject:true,
-            chunks:['dashBoard'],
+            inject: true,
+            chunks: ['dashBoard', 'tabla'],
             filename: 'admin.html'
         }),
         new HtmlWebpackPlugin({
             template: "./app/public/profile.html",
-            inject:true,
-            chunks:['userProfile'],
+            inject: true,
+            chunks: ['userProfile'],
             filename: 'profile.html'
         }),
         new MiniCssExtractPlugin({
