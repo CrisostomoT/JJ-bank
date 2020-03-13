@@ -1,21 +1,7 @@
 let Prestamos =  JSON.parse(localStorage.getItem("DatosPrestamos")) || [];
-let tBody = document.getElementById('tbody');
+let tBody = document.querySelector('#tbodycito');
 
-function prestamoAdmin() {
-    let nombre = document.getElementById('name').value;
-    let monto = document.getElementById('monto').value;
-    let cuota = document.getElementById('cuotas').value;
-    let resultado = document.getElementById('resultado1').innerText;
-    Prestamos.push({
-        Nombre : nombre,
-        Monto : monto,
-        Cuota : cuota,
-        cuotaMensual : resultado
-    })
-    localStorage.setItem("DatosPrestamos", JSON.stringify(Prestamos));
-    console.log(Prestamos)
-   listarTrPrestamo();
-}
+
 
 const listarTrPrestamo = () => {
     console.log(Prestamos)
@@ -40,7 +26,9 @@ const listarTrPrestamo = () => {
     })
 }
 
+   listarTrPrestamo();
 
 
-document.getElementById('btn-prestamo').addEventListener('click',prestamoAdmin);
+
+
 
