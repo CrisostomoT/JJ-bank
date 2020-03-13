@@ -3,6 +3,7 @@ let tBody = document.querySelector('#tbodycito');
 
 
 
+// document.getElementById('btn-prestamo').addEventListener('click',prestamosAdmin());
 const listarTrPrestamo = () => {
     console.log(Prestamos)
     tBody.innerHTML = '';
