@@ -1,8 +1,8 @@
-import $ from 'jquery';
-import dt from 'datatables.net';
-import editor from 'datatables.net-editor';
+// import $ from 'jquery';
+// import dt from 'datatables.net';
+// import editor from 'datatables.net-editor';
 
 
-$(document).ready(function() {
-    $('#example').DataTable();
-} );
+// $(document).ready(function() {
+//     $('#example').DataTable();
+// } );
