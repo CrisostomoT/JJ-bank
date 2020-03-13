@@ -275,14 +275,23 @@
 
       <div class="card shadow mb-4">
         <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">Dinero Prestado</h6>
+          <h6 class="m-0 font-weight-bold text-primary">Prestamos Aprobados</h6>
         </div>
         <div class="card-body">
-          <div class="chart-area">
-            <canvas id="myAreaChart"></canvas>
-          </div>
-          <hr>
+          <table id="example" class="hover" style="width:100%">
 
+            <tr>
+              <th>Nombre</th>
+              <th>Monto</th>
+              <th>Cuota</th>
+              <th>Cuota Mensual</th>
+              <!-- <th>Aprobación</th> -->
+            
+            </tr>
+            <tbody id="ulPrestamosAprob"></tbody>
+
+
+          </table>
         </div>
       </div>
 
