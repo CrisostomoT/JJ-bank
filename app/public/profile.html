@@ -59,27 +59,7 @@
                         </a>
                     </div>
                 </li>
-    <nav class="navbar navbar-expand-lg navbar-success" style="background: linear-gradient(to right, #581845 , #900C3F )">
-      <a class="navbar-brand test" href="#">JJBank</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link test" href="index.html">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link test" href="profile.html">Profile</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link test" href="admin.html">Admin</a>
-          </li>
-  
-        </ul>
-      </div>
-    </nav>
+    
 
             </ul>
         </div>
@@ -227,7 +207,9 @@
                                                 </div>
 
                                                 <div class="modal-body">
-                                                    <form>
+                                                    <form >
+                                                        <label for="">Ingrese Nombre</label>
+                                                        <input type="text" id="name">
                                                         <p>Tipo de préstamo</p>
                                                         <div class="form-check form-check-inline">
                                                             <input class="form-check-input" type="checkbox"
@@ -278,7 +260,7 @@
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary"
                                                         data-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                                    <button type="button" id="btn-prestamo" class="btn btn-primary">Save changes</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -308,7 +290,7 @@
                         </div>
                         <div class="card shadow mb-4">
                             <div class="card-header bg-gradient-dark py-3">
-                                <h6 class="m-0 font-weight-bold text-white">Solicitud de Prestamo</h6>
+                                <h6 class="m-0 font-weight-bold text-white">Prestamos</h6>
                             </div>
                             <div class="card-body">
                                 <table class="table">
@@ -317,11 +299,7 @@
                                         <th>Nombre</th>
                                         <th>Monto</th>
                                         <th>Cuotas</th>
-                                        <th>
-                                        <td><button type="button" class="btn btn-outline-warning">Solicitar</button>
-                                        </td>
-                                        </th>
-                                    </tr>
+                                     </tr>
                                     <tr>
                                         <td>Diego</td>
                                         <td></td>
@@ -352,28 +330,40 @@
                             </div>
 
                             <div class="card-body">
-                                <table class="table">
-
-                                    <tr>
-                                        <th>Comercio</th>
-                                        <th>Consumo</th>
-                                        <th>Cuotas</th>
-
-                                    </tr>
-                                    <tr>
-                                        <td>Diego</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-
-                                    </tr>
-
-
-                                </table>
+                                <div class='card-wrapper'></div>
+                                <form>
+                                    <input type="text" name="number"> 
+                                    <input type="text" name="name"/>
+                                    <input type="text" name="expiry"/>
+                                    <input type="text" name="cvc"/>
+                                </form>
                             </div>
                         </div>
 
                     </div>
+                </div>
+                <div class="card-header bg-gradient-dark py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-white">Conversor de monedas</h6>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="col">
+                                <input type="number" class="form-control" id="quantity" placeholder="Cantidad a convertir">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" id="fromCurrency" placeholder="Desde que criptomoneda/moneda">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" id="toCurrency" placeholder="A que criptomoneda/moneda">
+                            </div>
+                            <button type="button" class="btn btn-outline-success" id="convert">Convert</button>
+                        </div>
+
+                        <div id="currencyOutput">
+
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

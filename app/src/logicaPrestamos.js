@@ -1,7 +1,6 @@
-
-
  export default function cuotaMensual (){
-
+   
+    let name = document.getElementById('name');
     let dropMonto = document.getElementById("monto");
     let monto = (dropMonto.options[dropMonto.selectedIndex].value).slice(1,6);
 

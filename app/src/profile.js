@@ -7,3 +7,5 @@ import './index.scss';
 import './styleUsser.scss';
 
 import './logicaPrestamos';
+import './prestamosAdmin'
+
