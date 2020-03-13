@@ -18,11 +18,8 @@ module.exports = {
         currencyConverter: './app/src/currencyConverter.js',
         tabla: './app/src/tabla.js',
         logicaPrestamos:'./app/src/logicaPrestamos.js',
-<<<<<<< HEAD
-        prestamoAdmin: './app/src/prestamosAdmin.js'
-=======
-        cardInicializacion: './app/src/cardInicializacion.js'
->>>>>>> 21a0ec899def367deb3ebe5343e3eff7ab23adab
+        prestamoAdmin: './app/src/prestamosAdmin.js',
+        cardInicializacion: './app/src/cardInicializacion.js',
     },
     output: {
         filename: "[name].js",
