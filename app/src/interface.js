@@ -1,22 +1,32 @@
-const a = require('./sesion.js')
+// const a = require('./sesion.js')
 
-// DOM
-document.getElementById('sesion').addEventListener('submit', function () {
-    event.preventDefault();
-    let mail = inputEmail.value;
-    let password = inputPassword.value;
-    datos=['juan@gmail','1234'];
-    localStorage.setItem('datosRegistrados', JSON.stringify(datos));
+// // DOM
+// let datos = JSON.parse(localStorage.getItem("datosIngresados")) ªª;
 
-    let datos = JSON.parse(localStorage.getItem("datosRegistrados"));
-    console.log('datos'+datos);
-    if (datos.indexOf(mail) != -1 && datos.indexOf(password) != -1) {
-        alert("Bienvenido");
-        location.href = "profile.html";
-    } else {
-        alert("Usuario o Contraseña incorrectos!");
-    };
-})
+// document.getElementById('sesion').addEventListener('submit', function () {
+//     event.preventDefault();
+//     let mail = document.getElementById("inputEmail").value;
+//     let password = documet.getElementById("inputPassword").value;
+//     datos.push({
+//         Email: mail,
+//         Password: password,
+
+//     }) 
+   
+//     localStorage.setItem('datosIngresados', JSON.stringify(datos));
+ 
+    
+    
+      
+//     if (datos.indexOf(mail) != -1 && datos.indexOf(password) != -1) {
+//         alert("Bienvenido");
+//         location.href = "profile.html";
+//     } else {
+//         alert("Usuario o Contraseña incorrectos!");
+//     };
+// })
+
+
 
 
 

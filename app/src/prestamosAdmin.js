@@ -13,4 +13,4 @@ let Prestamos =  JSON.parse(localStorage.getItem("DatosPrestamos")) || [];
     console.log(prestamosAdmin)
 }
 
-document.getElementById('btn-prestamo').addEventListener('click',prestamosAdmin());
+// document.getElementById('btn-prestamo').addEventListener('click',prestamosAdmin());
