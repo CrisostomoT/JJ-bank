@@ -15,9 +15,14 @@ module.exports = {
         login: './app/src/login.js',
         navbar: './app/src/navbar.js',
         services: './app/src/services.js',
+        currencyConverter: './app/src/currencyConverter.js',
         tabla: './app/src/tabla.js',
         logicaPrestamos:'./app/src/logicaPrestamos.js',
+<<<<<<< HEAD
         prestamoAdmin: './app/src/prestamosAdmin.js'
+=======
+        cardInicializacion: './app/src/cardInicializacion.js'
+>>>>>>> 21a0ec899def367deb3ebe5343e3eff7ab23adab
     },
     output: {
         filename: "[name].js",
@@ -85,7 +90,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: "./app/public/profile.html",
             inject: true,
-            chunks: ['userProfile'],
+            chunks: ['userProfile', 'currencyConverter', 'cardInicializacion'],
             filename: 'profile.html'
         }),
         new MiniCssExtractPlugin({
