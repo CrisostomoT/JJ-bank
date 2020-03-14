@@ -8,7 +8,7 @@ function impCopyright() {
             <div class="row">
                 <div class="col-md-12 ">
                     <div class="text-center text-white">
-                        &copy; 2020 Your Company. J.J Bank. Todos los derechos Reservados.
+                        &copy; 2020 J.J Bank. Todos los derechos Reservados.
             </div>
                 </div>
             </div>

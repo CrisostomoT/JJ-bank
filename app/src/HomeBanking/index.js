@@ -16,7 +16,8 @@ const CardCliente = (cliente, index) => `
 
 
 let ulSolicitudes = document.getElementById("solicitudes");
-let NuevasSolicitudes = JSON.parse(localStorage.getItem('datosIngresados')) || [];  
+let NuevasSolicitudes = JSON.parse(localStorage.getItem('datosIngresados')) || []; 
+
 export const listarSolicitudes = () => {
 
   ulSolicitudes.innerHTML = "";

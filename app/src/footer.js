@@ -24,7 +24,7 @@ function impFooter(){
                                 <div class="col-1"><i class="far fa-envelope"></i></div>
                                 <div class="col-10">
                                     <h6 class="font-weight-bold mb-0">Preguntas</h6>
-                                    <p><a href="#">nosotros@jjbank.com</a></p>
+                                    <p><a href="#">administracion@jjbank.com</a></p>
                                 </div>
                             </div>
                         </li>
@@ -65,7 +65,7 @@ function impFooter(){
                                 <div class="col-1"> <i class="fas fa-angle-right"></i> </div>
                                 <div class="col-10">
                                     <p class="mb-0"><a href="#"> Tarjetas</a></p>
-                                    <label>Las más elegidas</label>
+                                    <label>Visa, MasterCard y American Express</label>
                                 </div>
                             </div>
                         </li>
@@ -86,11 +86,11 @@ function impFooter(){
                     <h5 class="mb-4 font-weight-bold"></h5>
 
 
-                    <img src="/app/src/assets/img/logo2.png" class="animated bounce infinite " alt="logo">
 
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
 
+                <p class="mb-0">Nuestras Redes sociales</p>
 
                     <ul class="social-pet mt-5">
                         <li><a href="#" title="facebook"><i class="fab fa-facebook-f"></i></a></li>

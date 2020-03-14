@@ -17,9 +17,6 @@ function prestamoAdmin() {
    listarTrPrestamo();
 }
 
-<<<<<<< HEAD
-// document.getElementById('btn-prestamo').addEventListener('click',prestamosAdmin());
-=======
 const listarTrPrestamo = () => {
     console.log(Prestamos)
     tBody.innerHTML = '';
@@ -47,4 +44,3 @@ const listarTrPrestamo = () => {
 
 document.getElementById('btn-prestamo').addEventListener('click',prestamoAdmin);
 
->>>>>>> 8d97f19f6a90a67030e27f691f91f3ed6665a162
