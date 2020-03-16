@@ -14,38 +14,36 @@ export function hacerRegister() {
   const ciudad = document.getElementById("inputCity").value;
   const provincia = document.getElementById("provincia").value;
   const codigoPostal = document.getElementById("inputZip").value;
-  usuariosRegistrados.push({
-    Nombre: nombre,
-    Apellido: apellido,
-    Genero: genero,
-    Documento: documento,
-    Telefono: telefono,
-    Email: email,
-    Password: password,
-    Direccion: direccion,
-    Ciudad: ciudad,
-    Provincia: provincia,
-    CodigoPostal: codigoPostal
-  });
-  localStorage.setItem("datosIngresados", JSON.stringify(usuariosRegistrados));
-  validarRegister(email);
 
+  
   function validarRegister(email) {
     for (let i = 0; i < usuariosRegistrados.length; i++) {
       let usuarioreg = usuariosRegistrados[i];
 
       if (email == usuarioreg.Email) {
-        alert("Tu ya te encuentras registrado! ");
-        break;
-        return;
-      } else {
-        alert("Registro Exitoso");
-        break;
-        return;
-      }
-
-      console.log(email);
-      console.log(usuarioreg.Email);
+        alert(`El Email ${email} ya se encuentra registrado! `);
+        return false;
+      } 
     }
+
+    return true;
+  }
+
+  if (validarRegister(email)) {
+    usuariosRegistrados.push({
+      Nombre: nombre,
+      Apellido: apellido,
+      Genero: genero,
+      Documento: documento,
+      Telefono: telefono,
+      Email: email,
+      Password: password,
+      Direccion: direccion,
+      Ciudad: ciudad,
+      Provincia: provincia,
+      CodigoPostal: codigoPostal
+    });
+    localStorage.setItem("datosIngresados", JSON.stringify(usuariosRegistrados));
+    alert("Registro exitoso");
   }
 }

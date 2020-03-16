@@ -34,6 +34,8 @@ export const listarSolicitudes = () => {
         NuevosClientes.push(cliente);
         NuevasSolicitudes.splice(index, 1);
         localStorage.setItem("nuevosClientes", JSON.stringify(NuevosClientes));
+        localStorage.setItem("datosIngresados", JSON.stringify(NuevasSolicitudes));
+
         listarSolicitudes();
         listarClientes();
         
@@ -45,6 +47,9 @@ export const listarSolicitudes = () => {
       document.querySelector("#desaprobarCliente" + index).addEventListener('click', () => {
         function desaprobarCliente(index) {
           NuevasSolicitudes.splice(index, 1);
+          localStorage.setItem("datosIngresados", JSON.stringify(NuevasSolicitudes));
+
+          
           listarSolicitudes();
           listarClientes();
         }
