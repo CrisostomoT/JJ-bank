@@ -38,6 +38,7 @@ export const listarSolicitudes = () => {
 
         listarSolicitudes();
         listarClientes();
+        ActualizarContadorClientes()
         
 
       })
@@ -89,6 +90,7 @@ const listarClientes = () => {
       localStorage.setItem("nuevosClientes", JSON.stringify(NuevosClientes));
       listarSolicitudes();
       listarClientes();
+      ActualizarContadorClientes()
     })
  }, 1);
   })
@@ -104,5 +106,13 @@ const eliminaCliente = () => {
     listadoClientes += CardCliente(cliente, index);
   })
 }
+function ActualizarContadorClientes(){
+  let NuevosClientes = JSON.parse(localStorage.getItem("nuevosClientes")) || [];
+  let contador = document.getElementById("contadorClientes");
+  contador.innerHTML = NuevosClientes.length
+
+
+}
  listarSolicitudes();
   listarClientes();
+  ActualizarContadorClientes();
