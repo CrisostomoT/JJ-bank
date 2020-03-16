@@ -2,7 +2,7 @@ const usuariosRegistrados =
   JSON.parse(localStorage.getItem("datosIngresados")) || [];
 
 export function hacerRegister() {
-  // console.log('HOLA')
+ 
   const nombre = document.getElementById("nombre").value;
   const apellido = document.getElementById("apellido").value;
   const genero = document.getElementById("genero").value;

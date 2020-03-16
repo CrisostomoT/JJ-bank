@@ -7,7 +7,7 @@ document.getElementById('sesion').addEventListener('submit', function () {
     let ban = 0;
     const datos = JSON.parse(localStorage.getItem("nuevosClientes"));
     for (let index = 0; index < datos.length; index++) {
-        // const element = datos[index];
+        
         if (datos[index].Email == email && datos[index].Password == password) {
            
             alert("Bienvenido " + datos[index].Nombre);
