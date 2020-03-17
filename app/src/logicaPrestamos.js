@@ -1,5 +1,3 @@
-
-  
  export default function cuotaMensual (){
 
     let dropMonto = document.getElementById("monto");
@@ -21,6 +19,3 @@ let boton =  document.getElementById('cuotaMensual');
 boton.addEventListener("click",()=>{  
     cuotaMensual();
 });
-
-
-
