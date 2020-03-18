@@ -1,30 +1,27 @@
-let Prestamos =  JSON.parse(localStorage.getItem("DatosPrestamos")) || [];
-let tBody = document.getElementById('tbody');
-
 function prestamoAdmin() {
-    
-    let monto = document.getElementById('monto').value;
-    let cuota = document.getElementById('cuotas').value;
-    let resultado = document.getElementById('resultado1').innerText;
-    Prestamos.push({
-        Nombre : nombre,
-        Monto : monto,
-        Cuota : cuota,
-        cuotaMensual : resultado
-    })
-    localStorage.setItem("DatosPrestamos", JSON.stringify(Prestamos));
-   
-   
+
+  let monto = document.getElementById('monto').value;
+  let cuota = document.getElementById('cuotas').value;
+  let resultado = document.getElementById('resultado1').innerText;
+  Prestamos.push({
+    Nombre: nombre,
+    Monto: monto,
+    Cuota: cuota,
+    cuotaMensual: resultado
+  })
+
+
 }
+let tBody = document.getElementById('tbody');
+let NuevosPedidos = JSON.parse(localStorage.getItem("DatosPrestamos")) || [];
 
- 
 
-const listarTrPrestamo = () => {
-    
-    tBody.innerHTML = '';
-    Prestamos.forEach((Prestamo,index) =>{
-        
-        tBody.innerHTML += `
+export const listarTrPrestamo = () => {
+
+  tBody.innerHTML = '';
+  NuevosPedidos.forEach((Prestamo, index) => {
+
+    tBody.innerHTML += `
            <tr>
               <td> ${Prestamo.Nombre} </td> 
               <td> ${Prestamo.Monto} </td> 
@@ -39,40 +36,82 @@ const listarTrPrestamo = () => {
            </tr>
               `;
 
-    })
     setTimeout(() => {
-        document.querySelector("#btnAprobarPrestamo" ).addEventListener('click', () => {
-          let index = event.target.dataset.index;
-          const prestamo = Prestamos[index];
-          let NuevosPrestamos = JSON.parse(localStorage.getItem("nuevosPrestamos")) || [];
-          NuevosPrestamos.push(prestamo);
-          Prestamos.splice(index, 1);
-          localStorage.setItem("nuevosPrestamos", JSON.stringify(NuevosPrestamos));
-          localStorage.setItem("DatosPrestamos", JSON.stringify(Prestamos));
-  
+      document.querySelector("#btnAprobarPrestamo").addEventListener('click', () => {
+        let index = event.target.dataset.index;
+        const prestamo = NuevosPedidos[index];
+        let NuevoPrestamo = JSON.parse(localStorage.getItem("nuevoPrestamo")) || [];
+        NuevoPrestamo.push(prestamo);
+        NuevosPedidos.splice(index, 1);
+        localStorage.setItem("nuevoPrestamo", JSON.stringify(NuevosPrestamos));
+        localStorage.setItem("DatosPrestamos", JSON.stringify(NuevosPedidos));
+
+        listarTrPrestamo();
+        prestamoAdmin();
+
+      })
+    }, 10)
+
+    setTimeout(() => {
+      document.querySelector("#desaprobarPrestamo" + index).addEventListener('click', () => {
+        function desaprobarPrestamo(index) {
+          NuevosPedidos.splice(index, 1);
+          localStorage.setItem("DatosPrestamos", JSON.stringify(NuevosPedidos));
+
+
           listarTrPrestamo();
           prestamoAdmin();
-          ActualizarContadorClientes()
-          
-  
-        })
-      }, 10)
-  
-      setTimeout(() => {
-        document.querySelector("#desaprobarPrestamo" ).addEventListener('click', () => {
-          function desaprobarPrestamo(index) {
-            Prestamos.splice(index, 1);
-            localStorage.setItem("DatosPrestamos", JSON.stringify(Prestamos));
-  
-            
-            listarTrPrestamo();
-            prestamoAdmin();
-          }
-          desaprobarPrestamo();
-        })
-      }, 1)
+        }
+        desaprobarPrestamo();
+      })
+    }, 1)
+
+  })
+}
+
+let listadoPrestamos = document.getElementById('listaPrestamos');
+
+
+const listarPrestamos = () => {
+
+  let NuevosPrestamos = JSON.parse(localStorage.getItem("nuevoPrestamo")) || [];
+  listadoPrestamos.innerHTML = '';
+
+  NuevosPrestamos.forEach(function (cliente, index) {
+
+    listadoPrestamos.innerHTML += `
+        <tr>
+          <td> ${Prestamo.Nombre} </td> 
+          <td> ${Prestamo.Monto} </td> 
+          <td> ${Prestamo.Cuota} </td> 
+     
+          <td><button type="button" id="eliminarPrestamo${index}" class="btn btn-outline-danger">Eliminar</button>
+          </td>
+        </tr>`;
+
+    setTimeout(() => {
+
+      document.querySelector("#eliminarPrestamo" + index).addEventListener('click', () => {
+
+        NuevosPrestamos.splice(index, 1);
+        localStorage.setItem("nuevoPrestamo", JSON.stringify(NuevosPrestamos));
+        listarTrPrestamo();
+        listarPrestamos();
+        ActualizarContadorClientes()
+      })
+    }, 1);
+  })
+}
+
+const eliminaPrestamo = () => {
+
+  let NuevosPrestamos = JSON.parse(localStorage.getItem("nuevoPrestamo")) || [];
+
+  listadoPrestamos.innerHTML = "";
+
+  NuevosPrestamos.forEach((cliente, index) => {
+    listadoPrestamos += tbody;
+  })
 }
 listarTrPrestamo();
 prestamoAdmin();
-
-
