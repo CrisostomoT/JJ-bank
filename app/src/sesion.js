@@ -3,7 +3,7 @@ function component() {
 
   element.innerHTML = `
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog " aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -27,13 +27,10 @@ function component() {
                     required>
                   <label for="inputPassword"></label>
                 </div>
-                <div class="custom-control custom-checkbox mb-3">
-                  <input type="checkbox" class="custom-control-input" id="customCheck1">
-                </div>
-                <input type="submit" value="Ingresar" class="btn btn-primary btn-block">
-                <hr class="my-4">
+                 <input type="submit" value="Ingresar" class="btn btn-primary btn-block">
               </form>
-            </div>
+              <a type="button" data-toggle="modal" data-target="#modalRegistracion">Registrarse</a>
+              </div>
           </div>
         </div>
         <div class="modal-footer">

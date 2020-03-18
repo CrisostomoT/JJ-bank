@@ -20,6 +20,3 @@ let boton =  document.getElementById('cuotaMensual');
 boton.addEventListener("click",()=>{  
     cuotaMensual();
 });
-
-
-
