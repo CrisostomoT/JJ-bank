@@ -17,6 +17,8 @@ function prestamoAdmin() {
    
 }
 
+ 
+
 const listarTrPrestamo = () => {
     
     tBody.innerHTML = '';
@@ -38,8 +40,39 @@ const listarTrPrestamo = () => {
               `;
 
     })
+    setTimeout(() => {
+        document.querySelector("#btnAprobarPrestamo" ).addEventListener('click', () => {
+          let index = event.target.dataset.index;
+          const prestamo = Prestamos[index];
+          let NuevosPrestamos = JSON.parse(localStorage.getItem("nuevosPrestamos")) || [];
+          NuevosPrestamos.push(prestamo);
+          Prestamos.splice(index, 1);
+          localStorage.setItem("nuevosPrestamos", JSON.stringify(NuevosPrestamos));
+          localStorage.setItem("DatosPrestamos", JSON.stringify(Prestamos));
+  
+          listarTrPrestamo();
+          prestamoAdmin();
+          ActualizarContadorClientes()
+          
+  
+        })
+      }, 10)
+  
+      setTimeout(() => {
+        document.querySelector("#desaprobarPrestamo" ).addEventListener('click', () => {
+          function desaprobarPrestamo(index) {
+            Prestamos.splice(index, 1);
+            localStorage.setItem("DatosPrestamos", JSON.stringify(Prestamos));
+  
+            
+            listarTrPrestamo();
+            prestamoAdmin();
+          }
+          desaprobarPrestamo();
+        })
+      }, 1)
 }
 listarTrPrestamo();
-
+prestamoAdmin();
 
 

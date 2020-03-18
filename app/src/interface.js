@@ -1,13 +1,15 @@
+
 const a = require('./sesion.js')
 
 document.getElementById('sesion').addEventListener('submit', function () {
     event.preventDefault();
     let email = inputEmail.value;
     let password = inputPassword.value;
-    let ban = 0;
+    let ban = 0;    
+    
     const datos = JSON.parse(localStorage.getItem("nuevosClientes"));
     for (let index = 0; index < datos.length; index++) {
-        
+  
         if (datos[index].Email == email && datos[index].Password == password) {
            
             alert("Bienvenido " + datos[index].Nombre);
