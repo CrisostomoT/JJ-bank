@@ -21,10 +21,10 @@
             <div class="w-100">
                 <nav class="navbar navbar-expand-lg navbar-light colorText1 "
                     style="background: linear-gradient(to right, #581845 , #900C3F )" id="accordionSidebar">
-                   <div href="index.html">
-                       <img src="app/src/assets/img/logo2.png" width="30" height="30" alt="">
-                       <a class="navbar-brand test"href="index.html" >Bank</a>
-                   </div>
+                    <div href="index.html">
+                        <img src="app/src/assets/img/logo2.png" width="30" height="30" alt="">
+                        <a class="navbar-brand test" href="index.html">Bank</a>
+                    </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -54,7 +54,7 @@
                                     aria-labelledby="userDropdown">
                                     <img src="/app/src/img/1.jpg" class="img-profile rounded-circle" alt="">
                                     <p id=usuarionav></p>
-                                    <a class="dropdown-item" href="#">
+                                    <a href="#" data-toggle="modal" data-target="#myModal">
                                         <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> Perfil
                                     </a>
                                     <a class="dropdown-item" href="#">
@@ -62,8 +62,9 @@
                                     </a>
 
                                     <div class="dropdown-divider">
-                                        
-                                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+
+                                        <a class="dropdown-item" href="#" data-toggle="modal"
+                                            data-target="#logoutModal">
                                             <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i> Salir
                                     </div>
                                     </a>
@@ -71,16 +72,16 @@
                             </li>
                         </ul>
                     </div>
-                </li>
-    
+                    </li>
 
-                            </li>
 
-                        </ul>
-                    </div>
-                </nav>
+                    </li>
+
+                    </ul>
             </div>
+            </nav>
         </div>
+    </div>
     </div>
     <!-- SIDEBAR -->
     <div class="contenedor d-flex justify-content-start">
@@ -203,8 +204,7 @@
                                 <h6 class="m-0 font-weight-bold text-white">Prestamos</h6>
                             </div>
                             <div class="card-body">
-<<<<<<< HEAD
-                                <table class="table">
+                                <<<<<<< HEAD <table class="table">
                                     <tr>
                                         <th>Nombre</th>
                                         <th>Monto</th>
@@ -219,107 +219,111 @@
                                         <td>300</td>
                                         <td></td>
                                     </tr>
-                                </table>
-=======
-                                <div class="container">
-                                    <div class="row justify-content-center">
-                                    <button type="button" class="boton " data-toggle="modal" data-target="#exampleModal">
-                                        Solicitar Préstamo</button>
-                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header" id="modal-prestamos">
-                                                    <h5 class="modal-title" id="exampleModalLabel">Información del
-                                                        Préstamo
-                                                    </h5>
-                                                    <button type="button" class="close" data-dismiss="modal"
-                                                        aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-
-                                                <div class="modal-body">
-                                                    <form >
-                                                        <label for="">Ingrese Nombre</label>
-                                                        <input type="text" id="name">
-                                                        <p>Tipo de préstamo</p>
-                                                        <div class="form-check form-check-inline">
-                                                            <input class="form-check-input" type="checkbox"
-                                                                id="inlineCheckbox1" value="option1">
-                                                            <label class="form-check-label"
-                                                                for="inlineCheckbox1">Personal</label>
-                                                        </div>
-                                                        <div class="form-check form-check-inline">
-                                                            <input class="form-check-input" type="checkbox"
-                                                                id="inlineCheckbox2" value="option2">
-                                                            <label class="form-check-label"
-                                                                for="inlineCheckbox2">comercial</label>
-                                                        </div>
-                                                        <div class="form-check form-check-inline">
-                                                            <input class="form-check-input" type="checkbox"
-                                                                id="inlineCheckbox2" value="option2">
-                                                            <label class="form-check-label"
-                                                                for="inlineCheckbox2">Hipotecario</label>
+                                    </table>
+                                    =======
+                                    <div class="container">
+                                        <div class="row justify-content-center">
+                                            <button type="button" class="boton " data-toggle="modal"
+                                                data-target="#exampleModal">
+                                                Solicitar Préstamo</button>
+                                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header" id="modal-prestamos">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Información
+                                                                del
+                                                                Préstamo
+                                                            </h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
                                                         </div>
 
-                                                        <div>
-                                                            <label>Monto</label>
-                                                            <select id="monto" >
-                                                                <option id="opcion1">$10000</option>
-                                                                <option id="opcion2">$50000</option>
-                                                                <option id="opcion3">$800000</option>
-                                                                <option id="opcion4">$100000</option>
-                                                            </select>
-                                                        </div>
+                                                        <div class="modal-body">
+                                                            <form>
+                                                                <label for="">Ingrese Nombre</label>
+                                                                <input type="text" id="name">
+                                                                <p>Tipo de préstamo</p>
+                                                                <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        id="inlineCheckbox1" value="option1">
+                                                                    <label class="form-check-label"
+                                                                        for="inlineCheckbox1">Personal</label>
+                                                                </div>
+                                                                <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        id="inlineCheckbox2" value="option2">
+                                                                    <label class="form-check-label"
+                                                                        for="inlineCheckbox2">comercial</label>
+                                                                </div>
+                                                                <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        id="inlineCheckbox2" value="option2">
+                                                                    <label class="form-check-label"
+                                                                        for="inlineCheckbox2">Hipotecario</label>
+                                                                </div>
 
-                                                        <div>
-                                                            <label>cuotas</label>
-                                                            <select id="cuotas">
-                                                                <option id="A">12 meses</option>
-                                                                <option id="B">18 meses </option>
-                                                                    <option id="C">24 meses</option>
-                                                                    <option id="D">36 meses</option>
-                                                            </select>
+                                                                <div>
+                                                                    <label>Monto</label>
+                                                                    <select id="monto">
+                                                                        <option id="opcion1">$10000</option>
+                                                                        <option id="opcion2">$50000</option>
+                                                                        <option id="opcion3">$800000</option>
+                                                                        <option id="opcion4">$100000</option>
+                                                                    </select>
+                                                                </div>
+
+                                                                <div>
+                                                                    <label>cuotas</label>
+                                                                    <select id="cuotas">
+                                                                        <option id="A">12 meses</option>
+                                                                        <option id="B">18 meses </option>
+                                                                        <option id="C">24 meses</option>
+                                                                        <option id="D">36 meses</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div>
+                                                                    <p id="">cuota mensual:<span id="resultado1"></span>
+                                                                    </p>
+
+                                                                </div>
+                                                                <button class="boton d-flex  m-auto" type="button"
+                                                                    id="cuotaMensual">Apriete aqui</button>
+
+                                                            </form>
                                                         </div>
-                                                        <div> 
-                                                            <p id="">cuota mensual:<span id="resultado1"></span></p>
-                                                            
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                            <button type="button" id="btn-prestamo"
+                                                                class="btn btn-primary">Save changes</button>
                                                         </div>
-                                                        <button class="boton d-flex  m-auto" type="button" id="cuotaMensual">Apriete aqui</button>
-                                                        
-                                                    </form>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary"
-                                                        data-dismiss="modal">Close</button>
-                                                    <button type="button" id="btn-prestamo" class="btn btn-primary">Save changes</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-<<<<<<< HEAD
-                                <table class="table">
-                                    <tr>
-                                        <th>Nombre</th>
-                                        <th>Monto</th>
-                                        <th>Cuotas</th>
-                                        <th>Saldo</th>
-                                        <th>Vencimiento</th>
-                                    </tr>
-                                    <tr>
-                                        <td>Diego</td>
-                                        <td>$50000</td>
-                                        <td>10</td>
-                                        <td>300</td>
-                                        <td></td>
-                                    </tr>
-                                </table>
-=======
->>>>>>> a2fc29b398f7b307d10448bf2746d146fa0d21df
->>>>>>> registro-alejandro
+                                    <<<<<<< HEAD <table class="table">
+                                        <tr>
+                                            <th>Nombre</th>
+                                            <th>Monto</th>
+                                            <th>Cuotas</th>
+                                            <th>Saldo</th>
+                                            <th>Vencimiento</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Diego</td>
+                                            <td>$50000</td>
+                                            <td>10</td>
+                                            <td>300</td>
+                                            <td></td>
+                                        </tr>
+                                        </table>
+                                        =======
+                                        >>>>>>> a2fc29b398f7b307d10448bf2746d146fa0d21df
+                                        >>>>>>> registro-alejandro
                             </div>
                         </div>
                         <div class="card shadow mb-4">
@@ -352,7 +356,7 @@
                                         <th>Nombre</th>
                                         <th>Monto</th>
                                         <th>Cuotas</th>
-                                     </tr>
+                                    </tr>
                                     <tr>
                                         <td>Diego</td>
                                         <td></td>
@@ -385,30 +389,34 @@
                             <div class="card-body">
                                 <div class='card-wrapper'></div>
                                 <form>
-                                    <input type="text" name="number"> 
-                                    <input type="text" name="name"/>
-                                    <input type="text" name="expiry"/>
-                                    <input type="text" name="cvc"/>
+                                    <input type="text" name="number">
+                                    <input type="text" name="name" />
+                                    <input type="text" name="expiry" />
+                                    <input type="text" name="cvc" />
                                 </form>
                             </div>
                         </div>
 
                     </div>
                 </div>
-                <div class="card-header bg-gradient-dark py-3 d-flex flex-row align-items-center justify-content-between">
+                <div
+                    class="card-header bg-gradient-dark py-3 d-flex flex-row align-items-center justify-content-between">
                     <h6 class="m-0 font-weight-bold text-white">Conversor de monedas</h6>
                 </div>
                 <div class="card-body">
                     <form>
                         <div class="form-row">
                             <div class="col">
-                                <input type="number" class="form-control" id="quantity" placeholder="Cantidad a convertir">
+                                <input type="number" class="form-control" id="quantity"
+                                    placeholder="Cantidad a convertir">
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control" id="fromCurrency" placeholder="Desde que criptomoneda/moneda">
+                                <input type="text" class="form-control" id="fromCurrency"
+                                    placeholder="Desde que criptomoneda/moneda">
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control" id="toCurrency" placeholder="A que criptomoneda/moneda">
+                                <input type="text" class="form-control" id="toCurrency"
+                                    placeholder="A que criptomoneda/moneda">
                             </div>
                             <button type="button" class="btn btn-outline-success" id="convert">Convert</button>
                         </div>
@@ -428,6 +436,210 @@
     </div>
     </div>
     </div>
+    <!-------------------------------------------modal usuario--------------------------------------------------------------------------->
+    <div class="container">
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <!--modal header-->
+                    <div class="modal3-header">
+                        <img class="avatar"
+                            src="https://www.pngitem.com/pimgs/m/78-786420_icono-usuario-joven-transparent-user-png-png-download.png "
+                            alt="">
+                        <p>Nombre del usuario</p>
+                      
+                    </div>
+                    <!-- Modal body -->
+                    <div class="conteiner">
+                        <div class="row">
+                        <div class="perfil">
+                            <h4 id="subtitulo">Detalles del Usuario:</h4>
+                            <div class="nombre">
+                                    <p>nombre:</p>
+                                    <input type="text" class="input form-control " name="input" autocomplete="given-name">
+                                </div>
+                            
+                            <div class="apellido">
+                                <p>Apellido:</p>
+                                <input type="text" class="input form-control " name="input" autocomplete="given-name">  
+                                </div>
+                            <div class="Dropdowns">
+                                <label for="inputState">Género:</label>
+                                <select id="Dropdowns" class="form-control">
+                                    <option selected> </option>
+                                    <option>Masculino</option>
+                                    <option>Femenino</option>
+                                    <option>Otros</option>
+                                </select>
+                                </div>
+                            <div class="Nr de documento">
+                                <p>Nro. de Documento:</p>
+                                <input type="number" class="input form-control " name="input" autocomplete="given-name">
+                            </div>
+                            <div class="Telefono">
+                                <p>Teléfono:</p>
+                                <input type="number" class="input form-control " name="input" autocomplete="given-name">
+                            </div>
+                            <div class="direccion">
+                                <p>Dirección:</p>
+                                <input type="text" class="input form-control " name="input" autocomplete="given-name">
+                            </div>
+                            <div class="ciudad">
+                                <p>Ciudad:</p>
+                                <input type="text" class="input form-control " name="input" autocomplete="given-name">
+                            </div>
+                            <div class="Dropdowns">
+                                <label for="inputState">Provincia:</label>
+                                <select id="Dropdowns" class="form-control">
+                                    <option selected> </option>
+                                    <option>Buenos Aires</option>
+                                    <option>Salta</option>
+                                    <option>Cordoba</option>
+                                    <option>San Juan</option>
+                                    <option>Buenos Aires</option>
+                                    <option>San Luis</option>
+                                    <option>Neuquen</option>
+                                    <option>Tucuman</option>
+                                    <option>Santa Fe</option>
+                                    <option>Mendoza</option>
+                                </select>
+                                </div>
+                                <div class="cp">
+                                    <p>CP:</p>
+                                    <input type="number" class="input form-control " name="input" autocomplete="given-name">
+                                </div>
+                                <div class="ciudad">
+                                    <p>Ciudad:</p>
+                                    <input type="text" class="input form-control " name="input" autocomplete="given-name">
+                                </div>
+                                <div class="email">
+                                <form class="form-inline">
+                                    <div class="form-group mb-2">
+                                      <label for="staticEmail2" class="sr-only">Email</label>
+                                      <input type="text" class="form-control-plaintext" id="staticEmail2" value="email@example.com">
+                                    </div>
+                                    <div class="form-group mx-sm-3 mb-2">
+                                      <label for="inputPassword2" class="sr-only">Password</label>
+                                      <input type="text" class="form-control" id="inputPassword2" placeholder="Password">
+                                    </div>
+                                    <button class="a" type="submit" class="btn btn-primary mb-2">Editar</button>
+                                  </form>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="a"type="button" class="btn btn-secondary" data-dismiss="modal">actualizar</button>
+                                <button class= "a"type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                       
+
+                    </div>
+                   
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <!------------------------------------------------------------------------footer-------------------------------------------------------->
     <footer>
         <div class="container-fluid">
             <div class="row">

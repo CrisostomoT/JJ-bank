@@ -9,6 +9,7 @@ import './styleUsser.scss';
 import './logicaPrestamos';
 import './prestamosAdmin'
 
+
 let datos = JSON.parse(localStorage.getItem("datoUsuarioActual"));
 if (datos.Password.substr(0,3) === "*#%") {
     document.getElementById("admin").style.visibility = "visible";doc
