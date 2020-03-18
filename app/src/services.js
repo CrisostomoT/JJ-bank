@@ -7,9 +7,8 @@ function impServices() {
     <div class="container-fluid">
     <div class="row">
         
-         <!--cards1-->
-        <div class="col-4">
-            <div class="card">
+    <div class="col-sm-12 col-md-12 col-lg-4">
+    <div class="card">
                 <img src="https://www.bbva.com/wp-content/uploads/2018/08/Tarjetas-de-Credito-Paraguay-1024x683.jpg"
                     class="card-img-top" width="200px" height="200px">
                 <div class="card-body">
@@ -28,8 +27,7 @@ function impServices() {
             </div>
         </div>
 
-        <!--cards2-->
-        <div class="col-4">
+        <div class="col-sm-12 col-md-12 col-lg-4">
             <div class="card ">
                 <img src="https://whostingok.com/wp-content/uploads/2019/10/prestamos4.png"
                     class="card-img-top" width="200px" height="200px">
@@ -49,21 +47,15 @@ function impServices() {
             </div>
         </div>
 
-        <!--cards3-->
-        <div class="col-4">
+        <div class="col-sm-12 col-md-12 col-lg-4">
             <div class="card">
-                <img src="https://casaluces.files.wordpress.com/2016/08/ahora_12_casaluces1.png?w=662"
+                <img src="./app/src/assets/imagenes.cards/seguros.png"
                     class="card-img-top" width="200px" height="200px">
                 <div class="card-body">
-                    <h5 class="card-title">Ahora 12 y Ahora 18</h5>
-                    <p class="card-text"></p>
+                    <h5 class="card-title">JJ Seguros</h5>
+                    <p class="card-text">Te ayudamos a cuidar eso que más querés.</p>
+                    <p class="card-text">Cotizá sin compromiso un seguro para tu casa 100% online. Hay planes desde $165 mensuales y todos incluyen asistencia gratuita.</p>
                 </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Promocion válida desde 01/02/2020 AL 28/05/2020.</li>
-                    <li class="list-group-item">El plan del gobierno nacional , incluye smatphones,
-                        notebooks, televisores, turismo, tablets, todo lo que necesitas</li>
-
-                </ul>
             </div>
         </div>
     </div>
