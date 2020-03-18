@@ -16,75 +16,65 @@
 </head>
 
 <body>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="navbar"></nav>
-  
-=======
-=======
->>>>>>> diego-admin
+
   <div class="container-fluid colorText">
     <div class="row">
-        <div class="w-100">
-            <nav class="navbar navbar-expand-lg navbar-light colorText1 "
-                style="background: linear-gradient(to right, #581845 , #900C3F )" id="accordionSidebar">
-                <div href="index.html">
-                    <img src="app/src/assets/img/logo2.png" width="30" height="30" alt="">
-                    <a class="navbar-brand test" href="index.html">Bank</a>
+      <div class="w-100">
+        <nav class="navbar navbar-expand-lg navbar-light colorText1 "
+          style="background: linear-gradient(to right, #581845 , #900C3F )" id="accordionSidebar">
+          <div href="index.html">
+            <img src="app/src/assets/img/logo2.png" width="30" height="30" alt="">
+            <a class="navbar-brand test" href="index.html">Bank</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+
+              <li class="nav-item">
+                <a class="nav-link test" href="profile.html">Profile</a>
+              </li>
+              <li class="nav-item">
+                <a id="admin" class="nav-link test" href="admin.html">Admin</a>
+              </li>
+              <!-- Nav Item - User Information -->
+              <li class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle d-flex" href="#" id="userDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+                  </span>
+                  <img src="/app/src/img/1.jpg" class="img-profile rounded-circle" alt="">
+                  <p id=usuarionav></p>
+                </a>
+                <!-- Dropdown - User Information -->
+                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                  <p id=usuarionav></p>
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> Perfil
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i> Configuracion
+                  </a>
+
+                  <div class="dropdown-divider">
+
+                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                      <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i> Salir
+                  </div>
+                  </a>
                 </div>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav ml-auto">
-                        
-                        <li class="nav-item">
-                            <a class="nav-link test" href="profile.html">Profile</a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="admin" class="nav-link test" href="admin.html">Admin</a>
-                        </li>
-                        <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle d-flex" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">
-                                </span>
-                                <img src="/app/src/img/1.jpg" class="img-profile rounded-circle" alt="">
-                                <p id=usuarionav></p>
-                            </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <p id=usuarionav></p>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> Perfil
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i> Configuracion
-                                </a>
+              </li>
+            </ul>
+          </div>
 
-                                <div class="dropdown-divider">
-
-                                    <a class="dropdown-item" href="#" data-toggle="modal"
-                                        data-target="#logoutModal">
-                                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i> Salir
-                                </div>
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                
-        </div>
-
-<<<<<<< HEAD
->>>>>>> 8b462b9296926b7c5669bf94298189e74954f017
-=======
+      </div>
     </div>
-</div>  
->>>>>>> diego-admin
+  </div>
+
   <div class="container-fluid">
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
       <h1 class="h3 mb-0 text-danger-800"></h1>
@@ -177,17 +167,17 @@
           <div class="card-body">
             <table class="table">
               <thead>
-              <tr>
-                <th>Nombre</th>
-                <th>Monto</th>
-                <th>Cuotas</th>
-                <th>Aprobacion</th>
-              </tr>
-            </thead>
-            <tbody id="tbody">
-              <tr >
-              </tr>
-            </tbody>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Monto</th>
+                  <th>Cuotas</th>
+                  <th>Aprobacion</th>
+                </tr>
+              </thead>
+              <tbody id="tbody">
+                <tr>
+                </tr>
+              </tbody>
             </table>
           </div>
         </div>
@@ -296,7 +286,7 @@
           <h6 class="m-0 font-weight-bold text-primary">Dinero Prestado</h6>
         </div>
         <div class="card-body">
-          
+
         </div>
       </div>
 
