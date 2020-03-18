@@ -16,7 +16,7 @@ const CardCliente = (cliente, index) => `
 
 
 let ulSolicitudes = document.getElementById("solicitudes");
-let NuevasSolicitudes = JSON.parse(localStorage.getItem('datosIngresados')) || []; 
+let NuevasSolicitudes = JSON.parse(localStorage.getItem('datosIngresados')) || [];
 
 export const listarSolicitudes = () => {
 
@@ -34,9 +34,12 @@ export const listarSolicitudes = () => {
         NuevosClientes.push(cliente);
         NuevasSolicitudes.splice(index, 1);
         localStorage.setItem("nuevosClientes", JSON.stringify(NuevosClientes));
+        localStorage.setItem("datosIngresados", JSON.stringify(NuevasSolicitudes));
+
         listarSolicitudes();
         listarClientes();
-        
+        ActualizarContadorClientes()
+
 
       })
     }, 10)
@@ -45,6 +48,9 @@ export const listarSolicitudes = () => {
       document.querySelector("#desaprobarCliente" + index).addEventListener('click', () => {
         function desaprobarCliente(index) {
           NuevasSolicitudes.splice(index, 1);
+          localStorage.setItem("datosIngresados", JSON.stringify(NuevasSolicitudes));
+
+
           listarSolicitudes();
           listarClientes();
         }
@@ -58,12 +64,12 @@ let listadoClientes = document.getElementById('listaClientes');
 
 
 const listarClientes = () => {
-  
+
   let NuevosClientes = JSON.parse(localStorage.getItem("nuevosClientes")) || [];
   listadoClientes.innerHTML = '';
-  
+
   NuevosClientes.forEach(function (cliente, index) {
-    
+
     listadoClientes.innerHTML += `
       <tr>
       <td>${cliente.Nombre}</td>
@@ -76,16 +82,17 @@ const listarClientes = () => {
       </td>
       </tr>`;
 
-      setTimeout(() => {
+    setTimeout(() => {
 
       document.querySelector("#eliminarCliente" + index).addEventListener('click', () => {
-      
-      NuevosClientes.splice(index, 1);
-      localStorage.setItem("nuevosClientes", JSON.stringify(NuevosClientes));
-      listarSolicitudes();
-      listarClientes();
-    })
- }, 1);
+
+        NuevosClientes.splice(index, 1);
+        localStorage.setItem("nuevosClientes", JSON.stringify(NuevosClientes));
+        listarSolicitudes();
+        listarClientes();
+        ActualizarContadorClientes()
+      })
+    }, 1);
   })
 }
 
@@ -99,5 +106,14 @@ const eliminaCliente = () => {
     listadoClientes += CardCliente(cliente, index);
   })
 }
- listarSolicitudes();
-  listarClientes();
+
+function ActualizarContadorClientes() {
+  let NuevosClientes = JSON.parse(localStorage.getItem("nuevosClientes")) || [];
+  let contador = document.getElementById("contadorClientes");
+  contador.innerHTML = NuevosClientes.length
+
+
+}
+listarSolicitudes();
+listarClientes();
+ActualizarContadorClientes();

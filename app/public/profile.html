@@ -16,46 +16,54 @@
 <body class="">
 
     <!-- NAVBAR AQUI -->
-    <nav class="navbar navbar-expand-lg navbar-success"
-        style="background: linear-gradient(to right, #581845 , #900C3F )">
-        <img src="/app/src/assets/img/nuevologo.png" width="30" height="30" alt="">
-        <a class="navbar-brand test" href="#">JJBank!</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link test" href="index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link test" href="profile.html">Profile</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link test" href="admin.html">Admin</a>
-                </li>
-                <!-- Nav Item - User Information -->
-                <li class="nav-item dropdown no-arrow">
-                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">Mario Bross</span>
-                        <img class="img-profile rounded-circle"
-                            src="https://static.vecteezy.com/system/resources/previews/000/550/731/non_2x/user-icon-vector.jpg">
-                    </a>
-                    <!-- Dropdown - User Information -->
-                    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                        aria-labelledby="userDropdown">
-                        <a class="dropdown-item" href="#">
-                            <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> Perfil
-                        </a>
-                        <a class="dropdown-item" href="#">
-                            <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i> Configuracion
-                        </a>
+    <div class="container-fluid colorText">
+        <div class="row">
+            <div class="w-100">
+                <nav class="navbar navbar-expand-lg navbar-light colorText1 "
+                    style="background: linear-gradient(to right, #581845 , #900C3F )" id="accordionSidebar">
+                    <div href="index.html">
+                        <img src="app/src/assets/img/logo2.png" width="30" height="30" alt="">
+                        <a class="navbar-brand test" href="index.html">Bank</a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav ml-auto">
+                            <!-- <li class="nav-item active">
+                                <a class="nav-link test" href="index.html">Home <span class="sr-only">(current)</span></a>
+                            </li> -->
+                            <li class="nav-item">
+                                <a class="nav-link test" href="profile.html">Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a id="admin" class="nav-link test" href="admin.html">Admin</a>
+                            </li>
+                            <!-- Nav Item - User Information -->
+                            <li class="nav-item dropdown no-arrow">
+                                <a class="nav-link dropdown-toggle d-flex" href="#" id="userDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+                                    </span>
+                                    <img src="/app/src/img/1.jpg" class="img-profile rounded-circle" alt="">
+                                    <p id=usuarionav></p>
+                                </a>
+                                <!-- Dropdown - User Information -->
+                                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                    aria-labelledby="userDropdown">
+                                    <p id=usuarionav></p>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> Perfil
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i> Configuracion
+                                    </a>
 
                                     <div class="dropdown-divider">
-                                        
-                                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+
+                                        <a class="dropdown-item" href="#" data-toggle="modal"
+                                            data-target="#logoutModal">
                                             <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i> Salir
                                     </div>
                                     </a>
@@ -63,20 +71,15 @@
                             </li>
                         </ul>
                     </div>
-                </li>
-    
-
-                            </li>
-
-                        </ul>
-                    </div>
-                </nav>
+                    
             </div>
+
         </div>
     </div>
+ 
     <!-- SIDEBAR -->
     <div class="contenedor d-flex justify-content-start">
-        <div class="row">
+        <div class="row siderbar">
             <div class="col-2">
                 <ul class="navbar-nav  sidebar sidebar-dark accordion"
                     style="background: linear-gradient(to right, #581845 , #900C3F )" id="accordionSidebar">
@@ -143,58 +146,18 @@
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
                     <h1 class="h3 mb-0 text-danger-800"></h1>
                 </div>
-                <div class="row">
-                    <div class="col-xl-3 col-md-6 mb-4">
-                        <div class="card border-left-success shadow h-100 py-2">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Prestamos
-                                            otorgados</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800">10</div>
-                                    </div>
-                                    <div class="col-auto">
-                                        <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6 mb-4">
-                        <div class="card border-left-info shadow h-100 py-2">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tarjetas de
-                                            Credito</div>
-                                        <div class="row no-gutters align-items-center">
-                                            <div class="col-auto">
-                                                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">10</div>
-                                            </div>
-                                            <div class="col">
-                                                <div class="progress progress-sm mr-2">
-                                                    <div class="progress-bar bg-info" role="progressbar"
-                                                        style="width: 50%" aria-valuenow="50" aria-valuemin="0"
-                                                        aria-valuemax="100"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-auto">
-                                        <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="card shadow mb-4">
+                        <div class="card3 shadow ">
                             <div class="card-header bg-gradient-dark py-3">
                                 <h6 class="m-0 font-weight-bold text-white">Prestamos</h6>
                             </div>
                             <div class="card-body">
+<<<<<<< HEAD
+=======
+
+>>>>>>> diego-admin
                                 <table class="table">
                                     <tr>
                                         <th>Nombre</th>
@@ -203,136 +166,119 @@
                                         <th>Saldo</th>
                                         <th>Vencimiento</th>
                                     </tr>
-                                    <tr>
-                                        <td>Diego</td>
-                                        <td>$50000</td>
-                                        <td>10</td>
-                                        <td>300</td>
-                                        <td></td>
-                                    </tr>
+                                    <tbody id="">
+
+                                        </tr>
                                 </table>
                                 <div class="container">
                                     <div class="row justify-content-center">
-                                    <button type="button" class="boton " data-toggle="modal" data-target="#exampleModal">
-                                        Solicitar Préstamo</button>
-                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header" id="modal-prestamos">
-                                                    <h5 class="modal-title" id="exampleModalLabel">Información del
-                                                        Préstamo
-                                                    </h5>
-                                                    <button type="button" class="close" data-dismiss="modal"
-                                                        aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
+                                        <button type="button" class="boton " data-toggle="modal"
+                                            data-target="#exampleModal">
+                                            Solicitar Préstamo</button>
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header" id="modal-prestamos">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Información del
+                                                            Préstamo
+                                                        </h5>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
 
-                                                <div class="modal-body">
-                                                    <form >
-                                                        <label for="">Ingrese Nombre</label>
-                                                        <input type="text" id="name">
-                                                        <p>Tipo de préstamo</p>
-                                                        <div class="form-check form-check-inline">
-                                                            <input class="form-check-input" type="checkbox"
-                                                                id="inlineCheckbox1" value="option1">
-                                                            <label class="form-check-label"
-                                                                for="inlineCheckbox1">Personal</label>
-                                                        </div>
-                                                        <div class="form-check form-check-inline">
-                                                            <input class="form-check-input" type="checkbox"
-                                                                id="inlineCheckbox2" value="option2">
-                                                            <label class="form-check-label"
-                                                                for="inlineCheckbox2">comercial</label>
-                                                        </div>
-                                                        <div class="form-check form-check-inline">
-                                                            <input class="form-check-input" type="checkbox"
-                                                                id="inlineCheckbox2" value="option2">
-                                                            <label class="form-check-label"
-                                                                for="inlineCheckbox2">Hipotecario</label>
-                                                        </div>
+                                                    <div class="modal-body">
+                                                        <form>
 
-                                                        <div>
-                                                            <label>Monto</label>
-                                                            <select id="monto" >
-                                                                <option id="opcion1">$10000</option>
-                                                                <option id="opcion2">$50000</option>
-                                                                <option id="opcion3">$800000</option>
-                                                                <option id="opcion4">$100000</option>
-                                                            </select>
-                                                        </div>
+                                                            <p>Tipo de préstamo</p>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="checkbox"
+                                                                    id="inlineCheckbox1" value="option1">
+                                                                <label class="form-check-label"
+                                                                    for="inlineCheckbox1">Personal</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="checkbox"
+                                                                    id="inlineCheckbox2" value="option2">
+                                                                <label class="form-check-label"
+                                                                    for="inlineCheckbox2">comercial</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="checkbox"
+                                                                    id="inlineCheckbox2" value="option2">
+                                                                <label class="form-check-label"
+                                                                    for="inlineCheckbox2">Hipotecario</label>
+                                                            </div>
 
-                                                        <div>
-                                                            <label>cuotas</label>
-                                                            <select id="cuotas">
-                                                                <option id="A">12 meses</option>
-                                                                <option id="B">18 meses </option>
+                                                            <div>
+                                                                <label>Monto</label>
+                                                                <select id="monto">
+                                                                    <option id="opcion1" value="10000">$10000</option>
+                                                                    <option id="opcion2" value="50000">$50000</option>
+                                                                    <option id="opcion3" value="800000">$800000</option>
+                                                                    <option id="opcion4" value="100000">$100000</option>
+                                                                </select>
+                                                            </div>
+
+                                                            <div>
+                                                                <label>cuotas</label>
+                                                                <select id="cuotas">
+                                                                    <option id="A">12 meses</option>
+                                                                    <option id="B">18 meses </option>
                                                                     <option id="C">24 meses</option>
                                                                     <option id="D">36 meses</option>
-                                                            </select>
-                                                        </div>
-                                                        <div> 
-                                                            <p id="">cuota mensual:<span id="resultado1"></span></p>
-                                                            
-                                                        </div>
-                                                        <button class="boton d-flex  m-auto" type="button" id="cuotaMensual">Apriete aqui</button>
-                                                        
-                                                    </form>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary"
-                                                        data-dismiss="modal">Close</button>
-                                                    <button type="button" id="btn-prestamo" class="btn btn-primary">Save changes</button>
+                                                                </select>
+                                                            </div>
+                                                            <div>
+                                                                <p id="">cuota mensual:<span id="resultado1"></span></p>
+
+                                                            </div>
+                                                            <button class="boton d-flex  m-auto" type="button"
+                                                                id="cuotaMensual">Calcular cuota mensual</button>
+
+                                                        </form>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-dismiss="modal">Cerrar</button>
+                                                        <button type="button" id="btn-prestamo"
+                                                            class="btn btn-primary">Enviar</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="card shadow mb-4">
-                            <div class="card-header bg-gradient-dark py-3">
-                                <h6 class="m-0 font-weight-bold text-white">Cuentas</h6>
-                            </div>
-                            <div class="card-body">
-                                <table class="table">
 
-                                    <tr>
-                                        <th>Tipo</th>
-                                        <th>Saldo</th>
 
-                                    </tr>
-                                    <tr>
-                                        <td>Diego</td>
-                                        <td>$50000</td>
+                            </div>
+                            <div class="card3 shadow">
+                                <div class="card-header bg-gradient-dark py-3">
+                                    <h6 class="m-0 font-weight-bold text-white">Cuentas</h6>
+                                </div>
+                                <div class="card-body">
+                                    <table class="table">
 
-                                </table>
-                            </div>
-                        </div>
-                        <div class="card shadow mb-4">
-                            <div class="card-header bg-gradient-dark py-3">
-                                <h6 class="m-0 font-weight-bold text-white">Prestamos</h6>
-                            </div>
-                            <div class="card-body">
-                                <table class="table">
+                                        <tr>
+                                            <th>Tipo</th>
+                                            <th>Saldo</th>
 
-                                    <tr>
-                                        <th>Nombre</th>
-                                        <th>Monto</th>
-                                        <th>Cuotas</th>
-                                     </tr>
-                                    <tr>
-                                        <td>Diego</td>
-                                        <td></td>
-                                    </tr>
-                                </table>
+                                        </tr>
+                                        <tr>
+                                            <td>Diego</td>
+                                            <td>$50000</td>
+
+                                    </table>
+                                </div>
                             </div>
+
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="card shadow mb-4">
+                    <div class="col-lg-12">
+                        <div class="card3 shadow mb-4">
+
                             <div
                                 class="card-header bg-gradient-dark py-3 d-flex flex-row align-items-center justify-content-between">
                                 <h6 class="m-0 font-weight-bold text-white">Tarjetas de credito</h6>
@@ -429,12 +375,11 @@
                     </div>
             </div>
         </div>
-    </div>
 
 
-    <div class="col">
-        <!-- CARD 3 -->
-    </div>
+        <div class="col">
+            <!-- CARD 3 -->
+        </div>
     </div>
     </div>
     <footer>
